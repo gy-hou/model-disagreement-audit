@@ -1,0 +1,3 @@
+target,budget,entering_n,leaving_n,entering_hits,leaving_hits,queue_jaccard,cohort,base,variant,learner,scope,M,development,target_information_condition
+AllErr,0.1,63,63,0,3,0.8663838812301167,freddie_mac_2021,freddie_mac_2018,global,interaction,exploratory_strict_endpoint_eligible,2,historical_2018_test,outcome target independent of candidate membership
+FN,0.1,132,132,5,6,0.7391304347826086,freddie_mac_2021,freddie_mac_2018,global,interaction,exploratory_strict_endpoint_eligible,2,historical_2018_test,outcome target independent of candidate membership

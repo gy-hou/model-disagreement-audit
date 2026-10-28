@@ -1,0 +1,110 @@
+{
+  "created_utc": "2026-10-19T08:20:08.836393+00:00",
+  "status": "passed",
+  "scope": "presentation only; no new estimates, fitted models, queues or bootstrap draws",
+  "source_sha256": {
+    "paper/v1_9/design_details.tex": "0f1d3f3f34e3e439ff46c6bcfa0ba0040d188683b9e2a693df4569458b0a3276",
+    "docs/revisions/kbs_v1_9/data_roles.json": "9581ecc3a9eae1062e1556d8edbad093ddc24f55921bf392c94768f7fcb974ce",
+    "results/tables/v1_9_revision/historical_2018_baselines/freddie_mac_2018/performance.csv": "6627bb2276bdea54a50c0a341b360e18f7520d3e70e398f7854ac2b6fa11a068",
+    "results/tables/v1_9_revision/historical_2018_baselines/fannie_mae_2018/performance.csv": "34711d0abda8665a53c2157b2fcaa943598c4012e18bee158ef39301480b72f7",
+    "results/tables/v1_4_mechanism/mechanism_plot_bins.csv": "9c4e5843844a7dacce2eb4d282b08334f0cf0fbaa10766e538fc664f77e71232",
+    "results/tables/v1_4_mechanism/mechanism_plot_spans.csv": "63f1275ef91208d7cda566e4e938b3943ee68e4fd47c673624e84b6082333515",
+    "results/tables/v1_4_mechanism/mechanism_plot_composition.csv": "9af9adc66c4b2f2dab67a8fc160552cd5c82b8247d33790382eeb2253789a843",
+    "results/tables/v1_9_revision/historical_2018_baselines/freddie_mac_2018/decomposition.csv": "0a2a845c17bd9053f45eb4c94bcf3f0a12f7504174ba59b07f31af069fd70421",
+    "results/tables/v1_9_revision/historical_2018_baselines/fannie_mae_2018/decomposition.csv": "e3b1a310ac06c521713c3c4cdddf45b9f6f8a087ccc720020e07e99b2242d75a",
+    "results/tables/v1_9_revision/main_historical_e2e3.csv": "93c442468f2260202432a5469a59643bcae5ca4fbad6477e83f4fb9aefcf18fd",
+    "results/tables/v1_9_revision/exploratory_retrospective/freddie_mac_2021/global__additive/performance.csv": "6c69e7c264d29d6d85491f396a0bd76b31e4cfcf10b658c5840467be8d469035",
+    "results/tables/v1_9_revision/exploratory_retrospective/freddie_mac_2022/global__additive/performance.csv": "83614fb4233224e334178d219748e758152c3f80e270af96118e760e9482d3a6",
+    "results/tables/v1_9_revision/exploratory_retrospective/freddie_mac_2023/global__additive/performance.csv": "1a02ca44e525198e8124c21671ef72cef6823b82403e05d79218689843e74599",
+    "results/tables/v1_9_revision/exploratory_retrospective/fannie_mae_2021/global__additive/performance.csv": "7048d543810224d14a3b9ea5606cdff8ae85af93de4238236d4ee73538221ece",
+    "results/tables/v1_9_revision/exploratory_retrospective/fannie_mae_2022/global__additive/performance.csv": "6702775c6497362db854e45729b7453de56cc0d44e023f94dd2fbef9267606ac",
+    "results/tables/v1_9_revision/exploratory_retrospective/fannie_mae_2023/global__additive/performance.csv": "d548232734464dee6592a8738bdc7cdaf185d9bd6a61d8dfd982f5c3872f138c",
+    "results/tables/v1_9_revision/development_policy_choices.csv": "ea91e79d9c3f32d526a876ec99d4278ecc0617b7d6bce4e1b3151ad5b1b7342e",
+    "results/tables/v1_9_candidate_rebuild/range_stability.csv": "9d4abee9c74149291c94a63a9d0d83b6a3fbe64287138150ccb5fe5e1b873ade",
+    "results/tables/v1_9_candidate_rebuild/comparisons.csv": "b912eb4761aa47d5f32c90f8ca93a5c07613592bd6612b6c3d6f2d4e4dfa7646"
+  },
+  "output_sha256": {
+    "results/tables/v1_10_presentation/figure1_data_roles.csv": "bcd49e035de9279af6d0a10aca0ce12ef088bd9aed1b29692ae9f553398d861e",
+    "paper/v1_10/figures/protocol_v1_10.pdf": "78726cd95bd1c7ff8a79df4fa378e64fcae7e7c678b55e94bf81edeecbc340b6",
+    "paper/v1_10/figures/protocol_v1_10.svg": "4a3f9e95979832d239725b5f2f371dbed1196895639cf2e7830d07862ade9796",
+    "paper/v1_10/figures/protocol_v1_10.png": "7541de71dfe93076957c732f5779970cc54b5b2289270eeac2bc91b9f2b504b8",
+    "results/tables/v1_10_presentation/figure2_historical_targets.csv": "29742c7f201b402d541bd6429b5bcd69ffda2aaf684846d0819dc7676e7fd61d",
+    "paper/v1_10/figures/historical_targets_v1_10.pdf": "694e8e73497e6c55574944a7e618b8f0150c1c55f39f03cf879e75f2965781b7",
+    "paper/v1_10/figures/historical_targets_v1_10.svg": "598127412361cfd03a9c383813adecd6726bfe797223891eeb3a963b98e0ffd3",
+    "paper/v1_10/figures/historical_targets_v1_10.png": "39c5fbd016c7fd48c2a114f078b12ec9d166bd039306db7cee3b0ab0ef5f51bd",
+    "results/tables/v1_10_presentation/figure3_geometry_bins.csv": "3a803767fbd31edafd979fd2e103d360385482ceb50d05714ad673bb5bb8a335",
+    "results/tables/v1_10_presentation/figure3_geometry_spans.csv": "cc28a1663eb6a09242b54cc903d93bc08dcc07448add020d010664924bd5f3ce",
+    "results/tables/v1_10_presentation/figure3_queue_composition.csv": "96be8496752dabc9edd2e27266809936cc71bb9687708998bffd8ceef374daae",
+    "results/tables/v1_10_presentation/figure3_signed_decomposition.csv": "28ee58b1537736016c173133a7210349eb03c0a5683cbf83f73039ca2443a42a",
+    "paper/v1_10/figures/score_geometry_v1_10.pdf": "eb291d5b308bdda9d711318dd934d25c3645a2d73d085365e96d02e84e745a1c",
+    "paper/v1_10/figures/score_geometry_v1_10.svg": "9b2b84729b9ea0c072720e79dc5396f721219cd5b98fb79f1f910ea858de794e",
+    "paper/v1_10/figures/score_geometry_v1_10.png": "8bcd79aebd71c2932b4959060a2285f6e30b6c801c24f26a2b03b2421d01fd24",
+    "results/tables/v1_10_presentation/main_comparison_display_values.csv": "62156052dbd538d4bc0349198be7851a114e0b8eeff52d1c15a8bd0fb6f41b6f",
+    "results/tables/v1_10_presentation/figure5_incremental_capture.csv": "d5e8bc09970c8c849b7d55bc446a9997d4060f00889801b00ae4324dedc11a67",
+    "paper/v1_10/figures/incremental_capture_v1_10.pdf": "9be269fca37d7e1cb027a4c9b9af59fa030cbdd9569aa5eba240eb31ac04d771",
+    "paper/v1_10/figures/incremental_capture_v1_10.svg": "e91874b1ccb5112d319da15d80c66b7e879c006c538971e3bb90165eca205afa",
+    "paper/v1_10/figures/incremental_capture_v1_10.png": "6b6f5cd60dcab23cd1fa93467fad04487e7d965bd14b2695f73c9c5c50c8d4c6",
+    "results/tables/v1_10_presentation/figure6_development_choices.csv": "67526aeb3621d912567965f44a10239fe8c547725222722530e9f0e10aa12a9f",
+    "results/tables/v1_10_presentation/figure6_frozen_transfer.csv": "2d7a3d4344632f9206051c73a4df720564d60aa7822c4a794e232c23cac5e964",
+    "paper/v1_10/figures/frozen_selection_v1_10.pdf": "13a39317643bd015252ab5fc2f3b01611dc0f85d4ee60848d5f499d29f51b880",
+    "paper/v1_10/figures/frozen_selection_v1_10.svg": "8e33894e1c79874232482dc8095fb296e62758085e2ba0dc7a62ba9bac0afbac",
+    "paper/v1_10/figures/frozen_selection_v1_10.png": "370aff4d84cd68be1b83523222fa10f1855b4e19840575826067042b07704d49",
+    "results/tables/v1_10_presentation/figure7_range_stability.csv": "113a11019769710357793d1535d1fe44dd2db7f35ff6e8b5c63ae83cff07988e",
+    "results/tables/v1_10_presentation/figure7_incremental_hits.csv": "d6f6117d05ffe480e0517ee0f280686205209d3d0f14d6db23e700fd9e2137c1",
+    "paper/v1_10/figures/candidate_stability_v1_10.pdf": "9e8dd5ba9972a69acfa880fbcd38e7c352294743c427944d17ef868f9d0a2b92",
+    "paper/v1_10/figures/candidate_stability_v1_10.svg": "305a7bf4819b8b1c359d06a89a581c394964072dc2828a72f7a16dcfee4af7f6",
+    "paper/v1_10/figures/candidate_stability_v1_10.png": "c218835b7328e50dc806bf2508364d0e3739de1d45825890d7b66291e11cbf27"
+  },
+  "figures": {
+    "protocol_v1_10": {
+      "width_in": 6.3,
+      "height_in": 3.25,
+      "png_dpi": 300,
+      "visible_text_inside_canvas": true
+    },
+    "historical_targets_v1_10": {
+      "width_in": 6.3,
+      "height_in": 5.0,
+      "png_dpi": 300,
+      "visible_text_inside_canvas": true
+    },
+    "score_geometry_v1_10": {
+      "width_in": 6.3,
+      "height_in": 7.05,
+      "png_dpi": 300,
+      "visible_text_inside_canvas": true
+    },
+    "incremental_capture_v1_10": {
+      "width_in": 6.3,
+      "height_in": 6.6,
+      "png_dpi": 300,
+      "visible_text_inside_canvas": true
+    },
+    "frozen_selection_v1_10": {
+      "width_in": 6.3,
+      "height_in": 4.75,
+      "png_dpi": 300,
+      "visible_text_inside_canvas": true
+    },
+    "candidate_stability_v1_10": {
+      "width_in": 6.3,
+      "height_in": 4.35,
+      "png_dpi": 300,
+      "visible_text_inside_canvas": true
+    }
+  },
+  "checks": [
+    "20 historical captures equal hits / target_n; 1999 original draws",
+    "four signed decompositions: total = position + within",
+    "queue composition fractions sum to one",
+    "all 20 historical composition / target hit counts agree across source generations",
+    "24 primary contrasts equal augmented hits - reference hits and divide by target N",
+    "remaining ceiling = min(B,T)-reference_hits and bounds observed improvement",
+    "three of four same choices imply nine of twelve identical-policy comparisons",
+    "36 reconstruction capture and membership hit identities",
+    "18 later reconstruction Jaccards in [0,1], each seed present",
+    "all source hashes unchanged after rendering",
+    "all canvases exactly 6.3 inches wide"
+  ],
+  "renderer_sha256": "7a2f50e42db24971f637c72ff7fbba7c0ca8e2153375d24a7d8382cc5bcfde2f"
+}

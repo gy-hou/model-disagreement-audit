@@ -1,0 +1,195 @@
+{
+  "version": "v1.9-fixed-system-1",
+  "frozen_at_utc": "2026-10-19T05:58:59.267644+00:00",
+  "seed": 20261019,
+  "status": "exploratory_retrospective_only; no verified independent evaluation source",
+  "endpoint": "historical recorded loan-age-based ever_60dpd_24m; not verified fixed-calendar follow-up; legacy targets preserved",
+  "exposure": {
+    "Freddie_2019_2020": "user confirmed previously used; not independent D_eval",
+    "Fannie_unsampled": "source labels used in historical prevalence/stratified sampling; not untouched"
+  },
+  "development": {
+    "freddie_mac_2018": "historical 2018 test, now explicitly audit development; old source artifacts preserved",
+    "fannie_mae_2018": "historical 2018 test, now explicitly audit development; old source artifacts preserved"
+  },
+  "evaluation": [
+    "freddie_mac_2021",
+    "freddie_mac_2022",
+    "freddie_mac_2023",
+    "fannie_mae_2021",
+    "fannie_mae_2022",
+    "fannie_mae_2023"
+  ],
+  "historical_2018_baselines": "Original family candidate set; descriptive Threshold/Range/score references, 1999 paired queue-rebuilding draws, target counts/hits/yield and Range-Threshold decomposition. Same cases now C_audit; never independent evaluation.",
+  "independent_evaluation": "blocked until separately frozen cohort scope and verified exposure/isolation contract",
+  "data_roles": "Original train/validation are A_base and eligibility/threshold sources; no new B_cal; historical test is C_audit. Original processing is not retrospectively a nested A/B/C design.",
+  "candidate_sets": {
+    "primary": "original 26-model grid global validation AUC floor .010, tolerance 1e-6",
+    "sensitivity": "original family-conditioned .010 set",
+    "no_new_brier_gate": true,
+    "M_lt_2": "Range unavailable; no meaningful disagreement queue"
+  },
+  "consensus": "logit(clip(mean candidate probabilities,1e-6,1-1e-6)); never mean candidate logits",
+  "learners": {
+    "primary": {
+      "name": "additive",
+      "features": "separate cubic splines, 5 quantile knots; StandardScaler; logistic C=1, max_iter=4000, tol=1e-7"
+    },
+    "sensitivity": {
+      "name": "interaction",
+      "features": "raw deployed logit; consensus logit; range when available",
+      "algorithm": "HGBT leaves=7, iterations=100, min_leaf=100, rate=.05, l2=1, bins=128; no early stopping"
+    }
+  },
+  "folds": 5,
+  "fold_seed": 20261019,
+  "hyperparameter_search": "none; identical fixed parameters and folds across information levels",
+  "policies": {
+    "P_score": [
+      "ThresholdProb",
+      "RiskTop",
+      "AboveTauLow",
+      "BelowTauTop",
+      "G0"
+    ],
+    "P_base": [
+      "ThresholdProb",
+      "RiskTop",
+      "AboveTauLow",
+      "BelowTauTop",
+      "G0",
+      "G1"
+    ],
+    "P_full": [
+      "ThresholdProb",
+      "RiskTop",
+      "AboveTauLow",
+      "BelowTauTop",
+      "G0",
+      "G1",
+      "Range",
+      "G2"
+    ]
+  },
+  "policy_selection": "maximize pooled 5-fold OOF hits per target/budget; ties use fixed POLICY_ORDER; empty target -> ThresholdProb",
+  "primary_targets": [
+    "AllErr",
+    "FN"
+  ],
+  "diagnostic_targets": [
+    "FP",
+    "Pos",
+    "EM_fixed",
+    "EM_variant"
+  ],
+  "budgets": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "primary_budget": 0.1,
+  "primary_contrasts": [
+    "G2-G1",
+    "P_full-P_base"
+  ],
+  "historical_primary_family_size": 24,
+  "independent_future_two_cohort_primary_family_size": 8,
+  "interval": "paired multinomial row bootstrap, rebuild weighted top-B; percentile pointwise 95%; primary Bonferroni percentile intervals. Approximate conditional coverage, not exact null tests.",
+  "bootstrap_historical": 1999,
+  "bootstrap_independent": 9999,
+  "strict_endpoint_sensitivity": {
+    "cohorts": [
+      "freddie_mac_2021",
+      "freddie_mac_2022",
+      "freddie_mac_2023"
+    ],
+    "budget": 0.1,
+    "bootstrap": 999,
+    "endpoint": "strict_calendar_age0_24_60plus_or_reo",
+    "population": "strict_known==True; eligible population and outcome BOTH change",
+    "model_and_policy": "unchanged legacy-2018 development models and selected policy; no endpoint refit",
+    "interpretation": "exploratory endpoint-plus-eligibility sensitivity, not a causal label correction or independent validation"
+  },
+  "family": "Historical primary: 6 cohort cells x 2 targets x 2 contrasts, global/additive only. Sensitivities descriptive; no confirmatory p-values.",
+  "scope": "Conditional on fitted credit/audit models, chosen policy, threshold and candidate set. No training/selection uncertainty or macro-environment sampling; borrower cluster IDs unavailable.",
+  "decomposition": "50 maximum fixed C_audit score bins, separately threshold sides; signed position/within components; not causal",
+  "empty_targets": "capture and contrast undefined, hits=0, report excluded bootstrap draws",
+  "failures": "raise for alignment, duplicate ID, probability, convergence or input hash errors; preserve failure record, never silently change models",
+  "retraining": "candidate reconstruction/retraining not performed; fixed-system evaluation only",
+  "input_hashes": {
+    "src/audit_revision_v1_9.py": "70f202b124228431b2e87c41358923524a9658ec324c75ad10025397f80a696c",
+    "tests/test_audit_revision_v1_9.py": "ed2be1efef41aadb57ff86a5cc10f743dd01948e48e3a1c0ce44e2c74b90fee0",
+    "docs/revisions/kbs_v1_9/independent_evaluation_gate.json": "b0630f7538b53e20a4b7b0fee139c199983efb7846f4b1999d01d7cde880a91c",
+    "docs/revisions/kbs_v1_9/DATA_AUDIT.md": "7bc4034b37c05e1771816143a97517542e4390898f6a97e1dfdb408bfbfd5217",
+    "results/tables/v1_4_mechanism/local_cache/freddie_mac_2018.npz": "d16a5bdd56838de95b96c3e1cfc57012299168effa641797f21db108cf424f6e",
+    "results/tables/v1_4_mechanism/local_cache/freddie_mac_2018_members.csv": "ac74ebe5bbdc483253aa3e6988c69b2d8d4a26307a77366220952b2832d665c1",
+    "results/tables/v0_7/candidate_pool_metrics_freddie_mac_2018.csv": "fbb0430fbfe80d3d8edaea9c90f7bafddc97f809782f9d7f490d4708faa3faa9",
+    "models/v0_7/deployment_grid/freddie_mac_2018/candidates/M1_lr_l2_engineered_C0p1.joblib": "84721e7d5c7ca2dda17b5add97488f5646ad722280e547dceea17df9a5146099",
+    "models/v0_7/deployment_grid/freddie_mac_2018/candidates/M1_lr_l1_engineered_C0p5.joblib": "58e17e8967b0e79097574759cca1d0a26e507e70315d01bc4f3e9e439b60149c",
+    "models/v0_7/deployment_grid/freddie_mac_2018/candidates/M2_xgb_d3_lr03_n400.joblib": "be5a89c84e0a28fc9bbe9bb3674dcdee361eb16f5d53057dfb24241dabb607f9",
+    "models/v0_7/deployment_grid/freddie_mac_2018/candidates/M2_xgb_d4_lr05_n300.joblib": "6a1becb8f60897d90c32af1585b9698f4217ca02e434ee8719adfb13de0dcd0c",
+    "models/v0_7/deployment_grid/freddie_mac_2018/candidates/M2_xgb_d4_lr1_n200.joblib": "c34d21cfedd1425c215ac8324edb271a1e70b0a4ff3753eab76bc7ae627ebdc0",
+    "models/v0_7/deployment_grid/freddie_mac_2018/candidates/M6_rf_n500_depth16.joblib": "d7b6e25f03b1a402e0e0c9f5c8d9d242a4bc3bdcac442d980d18b4a95e57f4bc",
+    "models/v0_7/deployment_grid/freddie_mac_2018/candidates/M6_rf_n300_depth8.joblib": "4ddb1c60bda1e81babac92dc69456540bf491522dbdb80f63086c1d4262aba14",
+    "models/v0_7/deployment_grid/freddie_mac_2018/candidates/M6_rf_n500_depth8.joblib": "b711c3955d77c339e55565f57ca781baf088faa7bea48ba8be43084886d533bf",
+    "models/v0_7/deployment_grid/freddie_mac_2018/candidates/M6_rf_n300_depth16.joblib": "c90a10163f0d668cd63e8fdcb1d851358bf2c42badd485b8273b2a86561b09e0",
+    "models/v0_7/deployment_grid/freddie_mac_2018/candidates/M6_rf_n200_depth16.joblib": "0b5c40e4a7f57ca10db0ce52a1e6aad1a70be83894588a39c33dcfe9c2655047",
+    "models/v0_7/deployment_grid/freddie_mac_2018/candidates/M6_rf_n200_depth8.joblib": "e8336dfe2165b1389d794395bcdeed36df39b8f63e27b3655e751af95156fd12",
+    "models/v0_7/deployment_grid/freddie_mac_2018/candidates/M7_ebm_noint_lr05_b256.joblib": "ffd22e32638f3f5eb91b13750d6b5cf717222060449373ef25bb3ebf2f36747d",
+    "models/v0_7/deployment_grid/freddie_mac_2018/candidates/M7_ebm_noint_lr05_b128.joblib": "96caeb67741b7e7cd990dbe2f85e16a803546c257a03349d974b7d43ac52acfe",
+    "results/tables/v1_4_mechanism/local_cache/freddie_mac_2021.npz": "a64064329220477da6c136d53004da6e749cc5e54465fdf6fcc0edcabea1a2b7",
+    "results/tables/v1_4_mechanism/local_cache/freddie_mac_2021_members.csv": "ac74ebe5bbdc483253aa3e6988c69b2d8d4a26307a77366220952b2832d665c1",
+    "results/tables/v1_4_mechanism/local_cache/freddie_mac_2022.npz": "c5be194cc2e752cf6affa85977111e6cce0de2a12dbc513d6b9a9ab375ae1954",
+    "results/tables/v1_4_mechanism/local_cache/freddie_mac_2022_members.csv": "ac74ebe5bbdc483253aa3e6988c69b2d8d4a26307a77366220952b2832d665c1",
+    "results/tables/v1_4_mechanism/local_cache/freddie_mac_2023.npz": "1f84a9883262eb283c5e65f0e26f8cd070816203d2c6b0fe7b019d2c4816c3b4",
+    "results/tables/v1_4_mechanism/local_cache/freddie_mac_2023_members.csv": "ac74ebe5bbdc483253aa3e6988c69b2d8d4a26307a77366220952b2832d665c1",
+    "results/tables/v1_4_mechanism/local_cache/fannie_mae_2018.npz": "e7c0461f61f3b160639f358e68b82a1454477658ed1970bb2ae36c2fae52a966",
+    "results/tables/v1_4_mechanism/local_cache/fannie_mae_2018_members.csv": "9ad8cfe92274f005859a59a7e7992e7074b0fd3140b5394bc7482c55fc79b451",
+    "results/tables/v0_7/candidate_pool_metrics_fannie_mae_2018.csv": "8525b162fc10e87df200a7aee4d4c28879925c8553d21c8f32e5e503b0557f36",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M1_lr_l2_engineered_C0p1.joblib": "b2043fde7940b257ea603be712e392327ecd0af5ff5fa171e18a1d1b2d5c1713",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M1_lr_l1_engineered_C0p5.joblib": "e664b523a274fcfde6e1e31d987be789264fcd683653675b560ffda873e8c75c",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M1_lr_l1_engineered_C1.joblib": "e8fc61a56ea8bde4e5d7f98504d8d7148f6a77bebef354c1f87cc3ee84bb0c57",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M1_lr_elasticnet_engineered.joblib": "35cbdce2746305d775564ef00d2b5abc66beb0ca284c53433584d80e72cb6118",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M1_lr_l2_raw.joblib": "28844fd7634724df55b5d40ccf50c5bbacb233687a68417704fb8aec14aed663",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M1_lr_l2_engineered_C1.joblib": "666972b76538eed4676b0b735c95691a296d5b07884368c57eeb73fa34f7c2e1",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M2_xgb_d3_lr03_n400.joblib": "68f73d47a1fefa460aafb0897f6635a9ae23a06b0cb345f33498580b09e798f0",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M2_xgb_d4_lr05_n300.joblib": "0c21519f907809666699e06a83acb6f2c8ba6819c4bf6b107429b035dddb0b05",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M2_xgb_d4_lr1_n200.joblib": "bbc246ab9a60fb56711ea30ae71664cbd78839d1d0f9dde81da2266102825cdb",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M2_xgb_d6_lr05_n300.joblib": "644c32e3a6660d401a24b22c92e1d3911fcafb257d8d6936a52e9ad09171e297",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M6_rf_n500_depth8.joblib": "dfd5d024b58a26b93d4d3625ff0e34a8158c65baa1579de865213dcadd3d2037",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M6_rf_n300_depth8.joblib": "770dafda8370a6cd94e227fdc01c358fb54b5bda3c0a1681fafb6fa280837b96",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M6_rf_n500_depth16.joblib": "cfbe69b57eff9a8ac449247898dbeae606e1dd392c6bd3b4e2b6c04942f0bf2a",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M6_rf_n200_depth8.joblib": "1c817750910914aea9902a7a420e7ce8c841e5ab97af9f7754dc1deed8889720",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M6_rf_n300_depth16.joblib": "bf820e884c9a5628f2d754005d6d6d6d9a68453628d2379bb2d15ecabd895b01",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M6_rf_n200_depth16.joblib": "144fa79eebf8df3cb5be97e76704d3d3b2e7041f44b7a25a41a5dd8009313ed7",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M7_ebm_noint_lr05_b256.joblib": "4138bd31314d5b484bb54b69d3c4b470f67927f79473f4323e3b77eb43528f5b",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M7_ebm_noint_lr05_b128.joblib": "31c1415e7683443184e5e2fbf2d9706f5c04807779ab441860a1026730aaeacf",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M7_ebm_noint_lr01_b128.joblib": "79ebd62cb3e133583517f1bd23e561d6bf3663fa9e9cacfe2a7e084d92e72ce2",
+    "models/v0_7/deployment_grid/fannie_mae_2018/candidates/M7_ebm_noint_lr01_b256.joblib": "d4ecbed4fe6d58511f72d79f6fb719ce71adc22a5f7dc097fed11ff1fe817fe0",
+    "results/tables/v1_4_mechanism/local_cache/fannie_mae_2021.npz": "4ce0ba93eac99edfba0b299dda159ae70f600a13d81726e4d41f73a64df359fa",
+    "results/tables/v1_4_mechanism/local_cache/fannie_mae_2021_members.csv": "9ad8cfe92274f005859a59a7e7992e7074b0fd3140b5394bc7482c55fc79b451",
+    "results/tables/v1_4_mechanism/local_cache/fannie_mae_2022.npz": "0e9d5ba7fac7c5595ba7b4bbc56d51e433d8766bb54cf7e8bf4a6d55570e68bc",
+    "results/tables/v1_4_mechanism/local_cache/fannie_mae_2022_members.csv": "9ad8cfe92274f005859a59a7e7992e7074b0fd3140b5394bc7482c55fc79b451",
+    "results/tables/v1_4_mechanism/local_cache/fannie_mae_2023.npz": "bb3e62ee3e469cf38d186b3449f3e296ff1ccfc7848014119b4ee876ccd837ac",
+    "results/tables/v1_4_mechanism/local_cache/fannie_mae_2023_members.csv": "9ad8cfe92274f005859a59a7e7992e7074b0fd3140b5394bc7482c55fc79b451",
+    "results/tables/v1_9_revision/local_cache/freddie_mac_2018_strict_label_audit.parquet": "66a61b063df60d8be6d7d1be98aadb51344db25404662a2a9dd6f82b11275bb0",
+    "results/tables/v1_9_revision/local_cache/freddie_mac_2021_strict_label_audit.parquet": "c7a6d6f91c8a1360583a61587f8c549a3d560e0ac8ad399833bab4ae40a32f24",
+    "results/tables/v1_9_revision/local_cache/freddie_mac_2022_strict_label_audit.parquet": "ad8186fc58c5645e883aee0eb4e1e98f4bfa63adc9e1159dff13608da74caa06",
+    "results/tables/v1_9_revision/local_cache/freddie_mac_2023_strict_label_audit.parquet": "2fdb8c7e2a4c6b0dc3a024bd8788891c7b3a8f21d92d1508ca4825d2aa6c7e7b"
+  },
+  "environment": {
+    "python": "3.14.3",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scipy": "1.17.1",
+    "sklearn": "1.8.0"
+  },
+  "bootstrap_historical_primary": 9999,
+  "protocol_amendment": {
+    "at_utc": "2026-10-19T06:00:07.959878+00:00",
+    "reason": "Before evaluation, increase primary bootstrap draws from 1999 to 9999 for 24-comparison Bonferroni tail resolution; no evaluation results inspected or generated",
+    "initial_plan_sha256": "56b18bce46079ba81b6a9f972cd0f9a05551509c998e8d7b663e9df1cefcf723",
+    "model_or_policy_changes": false,
+    "audit_clarification": "User confirmed prior Freddie2019/2020 use; audit corrected wording before any new evaluation."
+  }
+}

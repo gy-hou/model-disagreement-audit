@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "tests": 11,
+  "main_contrasts": 24,
+  "strict_contrasts": 12,
+  "execution_receipts_verified": 38,
+  "historical_configurations": 24,
+  "strict_configurations": 12,
+  "baseline_cohorts": 2,
+  "maximum_decomposition_residual": 2.0816681711721685e-17,
+  "independent_evaluation_completed": false,
+  "checked_at_utc": "2026-10-19T06:09:10.455645+00:00"
+}

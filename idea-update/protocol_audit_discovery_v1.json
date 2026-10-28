@@ -1,0 +1,252 @@
+{
+ "name": "audit_discovery_evaluation_v1",
+ "frozen_at": "2026-10-22T19:39:03+11:00",
+ "git_head": "01eab118238192c7f832fba01e3693aed9a55bda",
+ "purpose": "Under a fixed learning procedure, do the full symmetric representation and model identity give a checkable audit increment? Decide whether any scenario merits independent confirmation. All 7 datasets are reported; no positive result is required.",
+ "datasets": [
+  "uci",
+  "fico",
+  "hmda",
+  "lendingclub",
+  "gmc",
+  "hmeq",
+  "home_credit"
+ ],
+ "naming": "Evaluation inside the original test split is called the 'audit discovery evaluation'.",
+ "data_roles": {
+  "file": "idea-update/results/13_discovery_roles.csv",
+  "sha256": "7a959818f60ef86ea3332251b2b60972bc1c394ca6e23aba484c6ff94f0f9a52",
+  "train": "fitted the base candidate models (artifact field trained_on)",
+  "validation": "candidate eligibility (validation AUC) and tau (validation prevalence)",
+  "test": "audit discovery evaluation only; the audit head is cross-fitted inside it",
+  "prior_use": "Test splits were sealed on 2026-05-23 (docs/sealed_test_mtimes.md) and afterwards used in descriptive evaluations in v0.4-v1.8 (discovery arm, v1.2 baselines, v1.4 score controls). They are not untouched.",
+  "untouched_confirmation_data": "None available locally for these 7 datasets (all splits used). German/Australian credit were used in v0.7 and are too small; not used here. Independent confirmation would need new data.",
+  "leakage_check": "tau = validation prevalence for all 7; base models trained on train; candidates screened on validation AUC; no test labels used upstream. Cross-fitting the audit head does not address any base-model-level leakage, and none was found in the recorded artifact fields."
+ },
+ "units": "Rows. IDs are unique; no borrower/subject identifiers are available (recorded as a limitation); rows are treated as independent units. The evaluation is cross-sectional within each test split, not a forecasting split.",
+ "candidates": {
+  "rule": "global validation-AUC rule within the cached family-conditioned set (which contains every globally eligible candidate)",
+  "auc_gap": 0.01,
+  "tolerance": 1e-06
+ },
+ "reference": "p_dep = the deployed M2 voter's predicted probability; yhat = 1[p_dep >= tau]; targets AllErr = 1[yhat != Y], FN = (1 - yhat) Y.",
+ "outcome_model": "Every representation fits the outcome Y; fitted probabilities are converted to AllErr/FN target risks via the reference decision (src/audit_revision_v1_9.py target_probability), as in the paper.",
+ "representations": {
+  "G1": "[logit S, logit C], C = arithmetic mean of global candidates' probabilities",
+  "G2": "G1 + D, D = max - min of candidate probabilities (raw)",
+  "SYM": "G2 + logit of sorted candidate probabilities",
+  "ID": "SYM + logit of candidate probabilities in fixed registry order",
+  "GX": "G1 + the deployed artifact's raw feature columns (encoder fitted inside each training fold; <=120 levels native categorical, otherwise numeric parse or ordinal; unseen levels missing)",
+  "G1add": "additive G1 reference: separate cubic splines (5 quantile knots, no bias) + StandardScaler + logistic C=1",
+  "logit_clip": [
+   1e-06,
+   0.999999
+  ]
+ },
+ "redundancy_flags": "From 13_discovery_roles.csv. hmda and home_credit: M_global=2 and S is one of the two candidates, so G2, SYM and ID are algebraic functions of G1 (S, C): differences there are fit/representation effects only and cannot reflect new information. M_global=2 in general makes SYM equivalent to G2.",
+ "learners": {
+  "HGB": {
+   "max_iter": 100,
+   "max_leaf_nodes": 7,
+   "min_samples_leaf": 100,
+   "learning_rate": 0.05,
+   "l2_regularization": 1.0,
+   "max_bins": 128,
+   "early_stopping": false,
+   "random_state": 20261019,
+   "note": "the configuration that passed the identity positive control (script 11); used for G1, G2, SYM, ID, GX; no tuning, seed or metric search"
+  },
+  "additive_G1": {
+   "n_knots": 5,
+   "degree": 3,
+   "C": 1.0,
+   "max_iter": 4000,
+   "tol": 1e-07
+  }
+ },
+ "folds": {
+  "type": "StratifiedKFold",
+  "k": 5,
+  "shuffle": true,
+  "random_state": 20261022,
+  "stratify_on": "y",
+  "shared_by_all_methods": true
+ },
+ "budget": {
+  "fraction": 0.1,
+  "B": "ceil(0.10 N)",
+  "fold_allocation": "B_k by largest remainder of B*n_k/N, ties to the lower fold index; fixed before evaluation",
+  "queue": "inside each held-out fold, top B_k by target-aligned risk (rounded to 1e-12), ties by ascending row ID; hits, targets and budgets summed over folds, then capture = H/T and precision = H/B",
+  "remaining_capacity": "sum_k min(B_k, T_k) - H_reference: a sample ceiling under the fold quotas, not a learnable-information bound"
+ },
+ "targets": {
+  "primary": "AllErr",
+  "secondary": "FN"
+ },
+ "contrasts": {
+  "primary": [
+   {
+    "new": "ID",
+    "ref": "SYM",
+    "target": "AllErr",
+    "role": "primary"
+   },
+   {
+    "new": "ID",
+    "ref": "G1",
+    "target": "AllErr",
+    "role": "primary"
+   }
+  ],
+  "primary_family_size": 14,
+  "secondary": [
+   {
+    "new": "G2",
+    "ref": "G1",
+    "target": "AllErr",
+    "role": "secondary"
+   },
+   {
+    "new": "SYM",
+    "ref": "G2",
+    "target": "AllErr",
+    "role": "secondary"
+   },
+   {
+    "new": "SYM",
+    "ref": "G1",
+    "target": "AllErr",
+    "role": "secondary"
+   },
+   {
+    "new": "GX",
+    "ref": "G1",
+    "target": "AllErr",
+    "role": "secondary"
+   },
+   {
+    "new": "G1",
+    "ref": "G1add",
+    "target": "AllErr",
+    "role": "secondary"
+   },
+   {
+    "new": "G2",
+    "ref": "G1add",
+    "target": "AllErr",
+    "role": "secondary"
+   },
+   {
+    "new": "SYM",
+    "ref": "G1add",
+    "target": "AllErr",
+    "role": "secondary"
+   },
+   {
+    "new": "ID",
+    "ref": "G1add",
+    "target": "AllErr",
+    "role": "secondary"
+   },
+   {
+    "new": "GX",
+    "ref": "G1add",
+    "target": "AllErr",
+    "role": "secondary"
+   },
+   {
+    "new": "ID",
+    "ref": "SYM",
+    "target": "FN",
+    "role": "secondary"
+   },
+   {
+    "new": "ID",
+    "ref": "G1",
+    "target": "FN",
+    "role": "secondary"
+   },
+   {
+    "new": "G2",
+    "ref": "G1",
+    "target": "FN",
+    "role": "secondary"
+   },
+   {
+    "new": "SYM",
+    "ref": "G2",
+    "target": "FN",
+    "role": "secondary"
+   },
+   {
+    "new": "SYM",
+    "ref": "G1",
+    "target": "FN",
+    "role": "secondary"
+   },
+   {
+    "new": "GX",
+    "ref": "G1",
+    "target": "FN",
+    "role": "secondary"
+   },
+   {
+    "new": "G1",
+    "ref": "G1add",
+    "target": "FN",
+    "role": "secondary"
+   },
+   {
+    "new": "G2",
+    "ref": "G1add",
+    "target": "FN",
+    "role": "secondary"
+   },
+   {
+    "new": "SYM",
+    "ref": "G1add",
+    "target": "FN",
+    "role": "secondary"
+   },
+   {
+    "new": "ID",
+    "ref": "G1add",
+    "target": "FN",
+    "role": "secondary"
+   },
+   {
+    "new": "GX",
+    "ref": "G1add",
+    "target": "FN",
+    "role": "secondary"
+   }
+  ],
+  "interpretation": "ID-G1 > 0 alone does not establish an identity mechanism; ID-SYM > 0 with ID worse than G1 is not a practical audit improvement; a positive ID-SYM is first called 'an increment of the ordered representation under this learning procedure', not proof of added conditional information."
+ },
+ "bootstrap": {
+  "draws": 50000,
+  "seed": 20261023,
+  "unit": "row",
+  "scheme": "multinomial row weights drawn within each fold (fold sizes fixed), shared across all methods and targets; fixed OOF predictions; fold-wise B_k queues",
+  "intervals": "percentile; pointwise 95% for all; Bonferroni over the 14 primary comparisons (alpha 0.05/14)",
+  "alpha": 0.05,
+  "caveat": "Exploratory approximation: does not cover refitting, candidate selection, cross-fitting dependence or prior research exploration. Bonferroni does not repair these limits."
+ },
+ "materiality_rule": {
+  "source": "draft protocol of 2026-10-22 (IDEA_UPDATE.md): meaningful gain = dH >= max(5, 0.10 * remaining capacity) and the lower bound > 0 (adjusted for primary, pointwise for secondary)",
+  "status": "research screening rule fixed before the run; not a validated business threshold; continuous effects are always reported",
+  "loss": "dH <= -max(5, 0.10 * remaining capacity) and upper bound < 0",
+  "exclusion": "remaining capacity >= 50 and upper bound < 0.10 * remaining capacity",
+  "replication": "a contrast/target counts as replicated if it shows a meaningful gain in >= 3 datasets and a meaningful loss in none"
+ },
+ "decision_rules": [
+  "ID-SYM clearly positive AND ID-G1 has a practical gain: keep as an identity-mechanism lead; check against additive G1; choose at most 1-2 scenarios, freeze the method, and move to independent confirmation.",
+  "SYM improves but ID-SYM does not: the lead is in the full symmetric representation; do not report it as an identity gain.",
+  "Only GX improves: this full-feature procedure found usable gain; do not infer that candidate disagreement carries or can extract it.",
+  "Proper loss improves but audit hits do not: report the separation between prediction improvement and current-budget decision value.",
+  "No pre-specified scheme shows a clear practical gain: end this round of real-data expansion; the paper's main line is the exact construction, the synthetic realizable gain, and the negative result within the limited empirical scope.",
+  "Wide intervals: state that the evidence is insufficient, not that information is zero; do not start another search round automatically."
+ ],
+ "stopping_rules": "After the run: no new learner, metric, budget, threshold, seed or representation. All 7 datasets are reported, including failures and degenerate configurations.",
+ "outputs": "idea-update/results/14_methods.csv, 14_contrasts.csv, 14_logloss.csv, 14_status.csv, 14_run_info.json"
+}

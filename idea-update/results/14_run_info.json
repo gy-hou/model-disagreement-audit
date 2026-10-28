@@ -1,0 +1,98 @@
+{
+ "draws": 50000,
+ "datasets": [
+  "uci",
+  "fico",
+  "hmda",
+  "lendingclub",
+  "gmc",
+  "hmeq",
+  "home_credit"
+ ],
+ "info": [
+  {
+   "dataset": "uci",
+   "seconds": 8.8,
+   "Bk": [
+    120,
+    120,
+    120,
+    120,
+    120
+   ],
+   "M_global": 16
+  },
+  {
+   "dataset": "fico",
+   "seconds": 6.6,
+   "Bk": [
+    42,
+    42,
+    42,
+    42,
+    42
+   ],
+   "M_global": 14
+  },
+  {
+   "dataset": "hmda",
+   "seconds": 25.2,
+   "Bk": [
+    658,
+    657,
+    657,
+    657,
+    657
+   ],
+   "M_global": 2
+  },
+  {
+   "dataset": "lendingclub",
+   "seconds": 8.9,
+   "Bk": [
+    103,
+    103,
+    103,
+    103,
+    103
+   ],
+   "M_global": 4
+  },
+  {
+   "dataset": "gmc",
+   "seconds": 24.8,
+   "Bk": [
+    600,
+    600,
+    600,
+    600,
+    600
+   ],
+   "M_global": 17
+  },
+  {
+   "dataset": "hmeq",
+   "seconds": 4.8,
+   "Bk": [
+    24,
+    24,
+    24,
+    24,
+    24
+   ],
+   "M_global": 6
+  },
+  {
+   "dataset": "home_credit",
+   "seconds": 47.0,
+   "Bk": [
+    1231,
+    1230,
+    1230,
+    1230,
+    1230
+   ],
+   "M_global": 2
+  }
+ ]
+}

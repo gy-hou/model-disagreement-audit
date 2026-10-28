@@ -1,0 +1,55 @@
+{
+  "recorded_at_utc": "2026-10-19T06:36:34.930639+00:00",
+  "reason": "Independent implementation review after all six training jobs completed and before any new historical capture evaluation: reject all-invalid execution explicitly, verify generation receipt chain, reject constant positive Range; preserve original protocol and all fitted values.",
+  "protocol_sha256": "710f1345a3d960e0a286f9089d7da38e5015a0273be087c34e9bc19e241eb91c",
+  "statistical_parameters_changed": false,
+  "all_training_jobs_exited_successfully": true,
+  "completed_training_receipts": {
+    "results/tables/v1_9_candidate_rebuild/fannie_mae_2018__s2026101901_development.json": "5fdec8a21a1c2b80232ec5f8711b430b874cd79bdb33907dd28d97350669b795",
+    "results/tables/v1_9_candidate_rebuild/freddie_mac_2018__s2026101901_development.json": "834333b9cd0510b234c530139e21544ded5102e980b32fff8e04454a82117a5f",
+    "results/tables/v1_9_candidate_rebuild/fannie_mae_2018__s2026101902_development.json": "a8d64cdfc130e3b5057a68ac7ac96637fe19cf6cb836588ab81b4a633320cabb",
+    "results/tables/v1_9_candidate_rebuild/freddie_mac_2018__s2026101902_development.json": "3b62d82c760789f9aba21a57bacafb882a89dd5cf3737ed73e7d50882af997c2",
+    "results/tables/v1_9_candidate_rebuild/freddie_mac_2018__s2026101903_development.json": "8f69cfd2df7136ee9b76a9ddacb6fb1922bcf0aa9c0d10b45f4931f0df250b34",
+    "results/tables/v1_9_candidate_rebuild/fannie_mae_2018__s2026101903_development.json": "cc0a904eda4c1faa234676c09d75dfd627bccb7cfe9acaa4ffd6ff0d6456fc88"
+  },
+  "inputs": {
+    "src/candidate_rebuild_v1_9.py": {
+      "original_sha256": "1291336429ef5101ceffde0522e49df1965c7562357c9238f62ed5b9287bb83b",
+      "current_sha256": "d0fb18df42adb24a8d0c284b594983bf131deebc6085a2ab8b0367e1b110e175",
+      "archived_path": "results/tables/v1_9_candidate_rebuild/pre_evaluation_implementation_amendment/candidate_rebuild_v1_9.py"
+    },
+    "tests/test_candidate_rebuild_v1_9.py": {
+      "original_sha256": "a1e396833da8daa07dc93ad012e4195ceb637734fed25ad88f7c7525b711c1ad",
+      "current_sha256": "2ac29fb046dcaadc18c04f72d1f6299bafb0bc94e8aa35efae1bd8202034f1fa",
+      "archived_path": "results/tables/v1_9_candidate_rebuild/pre_evaluation_implementation_amendment/test_candidate_rebuild_v1_9.py"
+    }
+  },
+  "numerical_range_guard": "peak-to-peak across per-case ranges must exceed 1e-12; all actual C and evaluation artifacts are checked",
+  "unchanged_training_files": {
+    "results/tables/v1_9_candidate_rebuild/freddie_mac_2018__s2026101903_development.csv": "85bf72f395fc1d01efbf6f15ac3ebc301210c13ba080d19d59204d4fbe09f202",
+    "results/tables/v1_9_candidate_rebuild/fannie_mae_2018__s2026101902_development.csv": "b3bc5b759ee285910ff6dd0b4732530c302477d532af204f97105b2276b7b06a",
+    "results/tables/v1_9_candidate_rebuild/fannie_mae_2018__s2026101903_development.csv": "cb430ff729f1a0785e9a2796101627cc0fb4063c2f78cc4e2660a87bf87a0aeb",
+    "results/tables/v1_9_candidate_rebuild/freddie_mac_2018__s2026101902_development.csv": "65b93a76aa7767329f3797d0bdc38e0af86868baefe0457d57c418ae5a42b24c",
+    "results/tables/v1_9_candidate_rebuild/fannie_mae_2018__s2026101903_candidates.csv": "04704dd536881e963264ff8abf78b4478cb953ed4885323c19e7826af9a86342",
+    "results/tables/v1_9_candidate_rebuild/freddie_mac_2018__s2026101901_candidates.csv": "b1dbb2254dddb75a40342aa8bb240cd7ba9d02086e0033696793d0f58bb6ec6c",
+    "results/tables/v1_9_candidate_rebuild/fannie_mae_2018__s2026101901_development.csv": "c5679b9cf45a6039835a9ba2960e237720d6995e0a7258824208eb294e2f5dee",
+    "results/tables/v1_9_candidate_rebuild/fannie_mae_2018__s2026101902_candidates.csv": "ba05f1ed8428305392d8e858cb52023d4221967e065f61f9673e91f773b9803c",
+    "results/tables/v1_9_candidate_rebuild/freddie_mac_2018__s2026101901_development.csv": "174d9738759f533a87c472bff93b9b5ed6c7501e1dd443c735879a9f6f3a1a88",
+    "results/tables/v1_9_candidate_rebuild/freddie_mac_2018__s2026101902_candidates.csv": "53cf195a71466a02b14060e1071c27ddff1e00c8178adca0061395d90687abe4",
+    "results/tables/v1_9_candidate_rebuild/freddie_mac_2018__s2026101903_candidates.csv": "4c8019f05f0c55c64cf8fa2647052c8d425a5793a9dad3996355991fd78bf7e7",
+    "results/tables/v1_9_candidate_rebuild/fannie_mae_2018__s2026101901_candidates.csv": "91f203e7c50c2b76f22804fee8d3fc5a818abd7f7a2c4b663c2159e9dfdeb8d6",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101901/audit_models.joblib": "c3e20d9c13af15e2b5d79b441bf3bb0c351d073cc9297cedd5ad18d9eef861ea",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101901/development_predictions.npz": "41e2aea5da88a080373c999294251b8b1fdc54f70aa73db77aa6ba9bbfebc308",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101901/audit_models.joblib": "442927f809a825c9ce0e6e2b72c676a786e26e9ce63429534cf9c699eb7608d0",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101901/development_predictions.npz": "750220e4607922472fdc89f11bdd5ad71d292b10cfdfb64944e47274940c3d84",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101902/audit_models.joblib": "430a2722cdcdf2d14dc34bfa828148624a4848434db0e7bf88bc3cf7681035d2",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101902/development_predictions.npz": "e6e1952bcbaedf0cba52cb60cbc8620b3d397f764c3e21617d542263ccf97f1b",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101903/audit_models.joblib": "7b7f6af2f372c4997780237e0d2ac0dd328b023f917e1e5228c33a24c15c8491",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101903/development_predictions.npz": "65878225e48dc33a2d97aa025ee05ab29e99ffd36d04dea8b669332e80a5ba06",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101903/audit_models.joblib": "504d3f77dea82e820f4b350304dc27db29bc932cf08f594ff450d3abc480a1a2",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101903/development_predictions.npz": "1f833922ddcf96e878ec4acba4e2a6ecec57b1da3dbfa7c040f421b4ad20a8d8",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101902/audit_models.joblib": "c9178197c9c2d7030bb7e62e998b1e96dd53637ac1bad64828244b8581c3469c",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101902/development_predictions.npz": "85b0f0ee16a7d875867a979547be2370f6df75a49ebcaee687571bc4cca876ca"
+  },
+  "outcome_evaluation_started": false
+}

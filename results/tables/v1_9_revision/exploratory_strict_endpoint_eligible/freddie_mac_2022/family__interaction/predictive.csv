@@ -1,0 +1,3 @@
+contrast,metric,difference,lower,upper,interpretation,cohort,base,variant,learner,scope,M,development
+G2-G1,log_loss,-0.00043935899404101247,-0.0009237026178199187,8.525220001491746e-05,negative favors added information model,freddie_mac_2022,freddie_mac_2018,family,interaction,exploratory_strict_endpoint_eligible,13,historical_2018_test
+G1-G0,log_loss,0.0015668538578378405,0.0006487190059244378,0.0024257960942634443,negative favors added information model,freddie_mac_2022,freddie_mac_2018,family,interaction,exploratory_strict_endpoint_eligible,13,historical_2018_test

@@ -1,0 +1,24 @@
+[
+  {
+    "recorded_at_utc": "2026-10-19T06:01:24.475623+00:00",
+    "source_sha256": "2b034c9073d0dc52d6c59143c94174ba90e3fac202a2da609739ecc568c37093",
+    "original_frozen_source_sha256": "3cf3af324b47f50d2ac893058e15428418ff70d645b6fbe6abf6eb02ac99e41a",
+    "protocol_spec_sha256": "19f742641db61e666622ff9d810ceaa2d9e5631529614dde870503d23df32b1a",
+    "reason": "After completed production: shorter plot labels, derived primary bridge table, source-amendment verification and no-overwrite production guard. No statistical design, simulated values, or historical inputs changed.",
+    "production_csv_hashes_before_amendment": {
+      "results/tables/v1_9_mechanism/candidate_population_metrics.csv": "80b0cbdf9e35cd8707eb95fc0bf2fdf161530c96018bca0bebb020e7368fa00a",
+      "results/tables/v1_9_mechanism/counterexample_convergence_repetitions.csv": "9ce8c6ee2689629ec4854afbcef2417ed762b01d95a14d4f5673adda93ed32ad",
+      "results/tables/v1_9_mechanism/counterexample_convergence_summary.csv": "51e982b9795ffb06659a58c1b4a4b0c07ff84ac9552154f1d43fbbb536c1d225",
+      "results/tables/v1_9_mechanism/historical_simulation_summary_unchanged.csv": "57bf36fdab724e5c567cb894bceccd8f32940da1d142f0c0a8643a1ecb163be8",
+      "results/tables/v1_9_mechanism/mechanism_primary_summary.csv": "bf053b67e3b8073ecc7ed8be15ff647a4cc1e7bbaac36d01c7306ac8bccbb240",
+      "results/tables/v1_9_mechanism/population_atoms.csv": "5b09b520cdc999cad85a72dd231bc474362ea01ebcd4865dde2b2ab434c0cab2",
+      "results/tables/v1_9_mechanism/population_comparisons.csv": "82353797419cd2b36c08fc161a366fe2961e2b2128c4c1a378da261ca9f54386",
+      "results/tables/v1_9_mechanism/population_metrics.csv": "53052f89b8add0e4d09697b03847c52a40e8bbef99048bae5f6505175878c132",
+      "results/tables/v1_9_mechanism/population_threshold_mass_sensitivity.csv": "26e0c0879ec556c0ebc5ac3c3103b3121eabb126b6aa00774edbfa76c2b5937b",
+      "results/tables/v1_9_mechanism/simulation_comparison_repetitions.csv": "c78093a34f894dca662a88f0f8d028e9ab12222b3c3f945c87b1229f35e42747",
+      "results/tables/v1_9_mechanism/simulation_comparison_summary.csv": "dc5253c3c0193fe65e73ff5993ca5514f9ebef2feab7c63652de6879185b95a9",
+      "results/tables/v1_9_mechanism/simulation_queue_repetitions.csv": "acbf3be06694c5aead44a18727cdcbdd487cd2086e4eb44ecb3e90271fb9bbde",
+      "results/tables/v1_9_mechanism/simulation_queue_summary.csv": "56e130ff682a25a211bf4f8bcd357ae7662f49b17b902e7b82747a956a904451"
+    }
+  }
+]

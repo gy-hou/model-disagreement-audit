@@ -1,0 +1,52 @@
+{
+  "audit_date": "2026-10-19",
+  "timezone": "Australia/Sydney",
+  "status": "blocked_no_independent_D_eval",
+  "data_roles": {
+    "A_base": "2018 train fits credit predictors; 2018 validation selects candidates and tau; label exposure is historical",
+    "B_cal": "historical 2018 validation reused for sigmoid calibration; not isolated from candidate eligibility",
+    "C_audit": "all previously viewed outcomes are eligible only for development/exploratory analysis; v1.9 can use 2018 former test as development without claiming it is unseen",
+    "D_eval": null
+  },
+  "candidate_cohorts": {
+    "freddie_2019_2020": {
+      "status": "user_confirmed_prior_use_not_independent",
+      "user_statement_history": [
+        "User explicitly confirmed Freddie2019/2020 were previously used.",
+        "Separate later answer: uncertain whether any OTHER entirely unused data exist; proceed with existing data."
+      ],
+      "metadata_read": true,
+      "performance_read_in_this_audit": false,
+      "origination_unique_n_each": 50000,
+      "raw_id_pairwise_overlaps_with_other_freddie_years": 0,
+      "user_confirmed_prior_use": true
+    },
+    "fannie_unsampled_existing_years": {
+      "status": "not_unseen_source",
+      "reason": "full source labels used by stratified sampling and full-population prevalence metadata; original sampled IDs discarded except reconstructed 2018 servicing cache"
+    },
+    "freddie_2024_2025_existing_snapshot": {
+      "status": "no_complete_24month_calendar_window",
+      "reason": "zero origination rows mature by existing 2025-09 cutoff"
+    }
+  },
+  "public_boundary": {
+    "release_allowed_by_local_retrieval_notes": [
+      "ETL code",
+      "checksums",
+      "aggregate results",
+      "synthetic data"
+    ],
+    "do_not_release": [
+      "raw loan records",
+      "processed loan records",
+      "loan IDs",
+      "row-level predictions or derived labels"
+    ]
+  },
+  "new_source_search": {
+    "local_search_scope": "filename-only in Downloads and Archive for 2016/2017, Fannie2019/2020/2024/2025 archives",
+    "additional_archives_found": false,
+    "stopped_on_user_instruction": true
+  }
+}

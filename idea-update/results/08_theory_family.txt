@@ -1,0 +1,85 @@
+
+=== pi=1/2, d=1/10 ===
+eps= -3/10: marginal (score,label) joints unchanged=True; symmetric joint unchanged=True; AUC p1/p2/S=53/90/53/90/53/90
+       b=1/20: Vid-Vsym=3/200 (b|eps|=3/200) OK
+       b=1/10: Vid-Vsym=3/100 (b|eps|=3/100) OK
+       b=1/9: Vid-Vsym=1/30 (b|eps|=1/30) OK
+       b=3/20: Vid-Vsym=37/900 (b|eps|=9/200) DIFF
+eps=  -1/5: marginal (score,label) joints unchanged=True; symmetric joint unchanged=True; AUC p1/p2/S=53/90/53/90/53/90
+       b=1/20: Vid-Vsym=1/100 (b|eps|=1/100) OK
+       b=1/10: Vid-Vsym=1/50 (b|eps|=1/50) OK
+       b=1/9: Vid-Vsym=1/45 (b|eps|=1/45) OK
+       b=3/20: Vid-Vsym=47/1800 (b|eps|=3/100) DIFF
+eps= -1/10: marginal (score,label) joints unchanged=True; symmetric joint unchanged=True; AUC p1/p2/S=53/90/53/90/53/90
+       b=1/20: Vid-Vsym=1/200 (b|eps|=1/200) OK
+       b=1/10: Vid-Vsym=1/100 (b|eps|=1/100) OK
+       b=1/9: Vid-Vsym=1/90 (b|eps|=1/90) OK
+       b=3/20: Vid-Vsym=1/90 (b|eps|=3/200) DIFF
+eps= -1/20: marginal (score,label) joints unchanged=True; symmetric joint unchanged=True; AUC p1/p2/S=53/90/53/90/53/90
+       b=1/20: Vid-Vsym=1/400 (b|eps|=1/400) OK
+       b=1/10: Vid-Vsym=1/200 (b|eps|=1/200) OK
+       b=1/9: Vid-Vsym=1/180 (b|eps|=1/180) OK
+       b=3/20: Vid-Vsym=1/180 (b|eps|=3/400) DIFF
+eps=     0: marginal (score,label) joints unchanged=True; symmetric joint unchanged=True; AUC p1/p2/S=53/90/53/90/53/90
+       b=1/20: Vid-Vsym=0 (b|eps|=0) OK
+       b=1/10: Vid-Vsym=0 (b|eps|=0) OK
+       b=1/9: Vid-Vsym=0 (b|eps|=0) OK
+       b=3/20: Vid-Vsym=0 (b|eps|=0) OK
+eps=  1/20: marginal (score,label) joints unchanged=True; symmetric joint unchanged=True; AUC p1/p2/S=53/90/53/90/53/90
+       b=1/20: Vid-Vsym=1/400 (b|eps|=1/400) OK
+       b=1/10: Vid-Vsym=1/200 (b|eps|=1/200) OK
+       b=1/9: Vid-Vsym=1/180 (b|eps|=1/180) OK
+       b=3/20: Vid-Vsym=1/180 (b|eps|=3/400) DIFF
+eps=  1/10: marginal (score,label) joints unchanged=True; symmetric joint unchanged=True; AUC p1/p2/S=53/90/53/90/53/90
+       b=1/20: Vid-Vsym=1/200 (b|eps|=1/200) OK
+       b=1/10: Vid-Vsym=1/100 (b|eps|=1/100) OK
+       b=1/9: Vid-Vsym=1/90 (b|eps|=1/90) OK
+       b=3/20: Vid-Vsym=1/90 (b|eps|=3/200) DIFF
+eps=   1/5: marginal (score,label) joints unchanged=True; symmetric joint unchanged=True; AUC p1/p2/S=53/90/53/90/53/90
+       b=1/20: Vid-Vsym=1/100 (b|eps|=1/100) OK
+       b=1/10: Vid-Vsym=1/50 (b|eps|=1/50) OK
+       b=1/9: Vid-Vsym=1/45 (b|eps|=1/45) OK
+       b=3/20: Vid-Vsym=47/1800 (b|eps|=3/100) DIFF
+eps=  3/10: marginal (score,label) joints unchanged=True; symmetric joint unchanged=True; AUC p1/p2/S=53/90/53/90/53/90
+       b=1/20: Vid-Vsym=3/200 (b|eps|=3/200) OK
+       b=1/10: Vid-Vsym=3/100 (b|eps|=3/100) OK
+       b=1/9: Vid-Vsym=1/30 (b|eps|=1/30) OK
+       b=3/20: Vid-Vsym=37/900 (b|eps|=9/200) DIFF
+
+=== pi=1/25, d=1/100 ===
+eps=-3/100: marginal (score,label) joints unchanged=True; symmetric joint unchanged=True; AUC p1/p2/S=241/432/241/432/241/432
+       b=1/20: Vid-Vsym=3/2000 (b|eps|=3/2000) OK
+       b=1/10: Vid-Vsym=3/1000 (b|eps|=3/1000) OK
+       b=1/9: Vid-Vsym=1/300 (b|eps|=1/300) OK
+       b=3/20: Vid-Vsym=37/9000 (b|eps|=9/2000) DIFF
+eps= -1/50: marginal (score,label) joints unchanged=True; symmetric joint unchanged=True; AUC p1/p2/S=241/432/241/432/241/432
+       b=1/20: Vid-Vsym=1/1000 (b|eps|=1/1000) OK
+       b=1/10: Vid-Vsym=1/500 (b|eps|=1/500) OK
+       b=1/9: Vid-Vsym=1/450 (b|eps|=1/450) OK
+       b=3/20: Vid-Vsym=47/18000 (b|eps|=3/1000) DIFF
+eps=-1/100: marginal (score,label) joints unchanged=True; symmetric joint unchanged=True; AUC p1/p2/S=241/432/241/432/241/432
+       b=1/20: Vid-Vsym=1/2000 (b|eps|=1/2000) OK
+       b=1/10: Vid-Vsym=1/1000 (b|eps|=1/1000) OK
+       b=1/9: Vid-Vsym=1/900 (b|eps|=1/900) OK
+       b=3/20: Vid-Vsym=1/900 (b|eps|=3/2000) DIFF
+eps=     0: marginal (score,label) joints unchanged=True; symmetric joint unchanged=True; AUC p1/p2/S=241/432/241/432/241/432
+       b=1/20: Vid-Vsym=0 (b|eps|=0) OK
+       b=1/10: Vid-Vsym=0 (b|eps|=0) OK
+       b=1/9: Vid-Vsym=0 (b|eps|=0) OK
+       b=3/20: Vid-Vsym=0 (b|eps|=0) OK
+eps= 1/100: marginal (score,label) joints unchanged=True; symmetric joint unchanged=True; AUC p1/p2/S=241/432/241/432/241/432
+       b=1/20: Vid-Vsym=1/2000 (b|eps|=1/2000) OK
+       b=1/10: Vid-Vsym=1/1000 (b|eps|=1/1000) OK
+       b=1/9: Vid-Vsym=1/900 (b|eps|=1/900) OK
+       b=3/20: Vid-Vsym=1/900 (b|eps|=3/2000) DIFF
+eps=  1/50: marginal (score,label) joints unchanged=True; symmetric joint unchanged=True; AUC p1/p2/S=241/432/241/432/241/432
+       b=1/20: Vid-Vsym=1/1000 (b|eps|=1/1000) OK
+       b=1/10: Vid-Vsym=1/500 (b|eps|=1/500) OK
+       b=1/9: Vid-Vsym=1/450 (b|eps|=1/450) OK
+       b=3/20: Vid-Vsym=47/18000 (b|eps|=3/1000) DIFF
+eps= 3/100: marginal (score,label) joints unchanged=True; symmetric joint unchanged=True; AUC p1/p2/S=241/432/241/432/241/432
+       b=1/20: Vid-Vsym=3/2000 (b|eps|=3/2000) OK
+       b=1/10: Vid-Vsym=3/1000 (b|eps|=3/1000) OK
+       b=1/9: Vid-Vsym=1/300 (b|eps|=1/300) OK
+       b=3/20: Vid-Vsym=37/9000 (b|eps|=9/2000) DIFF
+eps=1/25: infeasible (eta outside [0,1])

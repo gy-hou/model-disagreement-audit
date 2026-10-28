@@ -1,0 +1,13 @@
+contrast,metric,difference,lower,upper,interpretation,cohort,base,variant,learner,scope,M,development
+G2-G1,log_loss,0.0001200128341036,-0.0001772828676312,0.0004540898021366,negative favors added information model,fannie_mae_2021,fannie_mae_2018,global,additive,exploratory_retrospective,9,historical_2018_test
+G1-G0,log_loss,-0.0001819527047001,-0.0006291119170891,0.0002503463026009,negative favors added information model,fannie_mae_2021,fannie_mae_2018,global,additive,exploratory_retrospective,9,historical_2018_test
+G2-G1,log_loss,9.30756825777956e-05,-0.0001428223551091,0.0003346796720091,negative favors added information model,fannie_mae_2022,fannie_mae_2018,global,additive,exploratory_retrospective,9,historical_2018_test
+G1-G0,log_loss,-0.0022399237938387,-0.0028818695128618,-0.0015985804692515,negative favors added information model,fannie_mae_2022,fannie_mae_2018,global,additive,exploratory_retrospective,9,historical_2018_test
+G2-G1,log_loss,-0.0005521538286176,-0.0007539192038561,-0.0003429080533237,negative favors added information model,fannie_mae_2023,fannie_mae_2018,global,additive,exploratory_retrospective,9,historical_2018_test
+G1-G0,log_loss,-0.0058549868153583,-0.0065636487806695,-0.0051187847944261,negative favors added information model,fannie_mae_2023,fannie_mae_2018,global,additive,exploratory_retrospective,9,historical_2018_test
+G2-G1,log_loss,0.0005577030140488,-1.2620046826013157e-06,0.0010821571783242,negative favors added information model,freddie_mac_2021,freddie_mac_2018,global,additive,exploratory_retrospective,2,historical_2018_test
+G1-G0,log_loss,0.0002793781086478,-0.0003905570027889,0.0009563176904425,negative favors added information model,freddie_mac_2021,freddie_mac_2018,global,additive,exploratory_retrospective,2,historical_2018_test
+G2-G1,log_loss,0.0009945809366911,0.0004381312959586,0.0015349457328705,negative favors added information model,freddie_mac_2022,freddie_mac_2018,global,additive,exploratory_retrospective,2,historical_2018_test
+G1-G0,log_loss,0.0006728305211136,0.0001244569203961,0.0012062434091063,negative favors added information model,freddie_mac_2022,freddie_mac_2018,global,additive,exploratory_retrospective,2,historical_2018_test
+G2-G1,log_loss,0.0015751650353456,0.0010652432151677,0.0020833369012254,negative favors added information model,freddie_mac_2023,freddie_mac_2018,global,additive,exploratory_retrospective,2,historical_2018_test
+G1-G0,log_loss,0.0037834019989272,0.0029739368334622,0.0045691262443013,negative favors added information model,freddie_mac_2023,freddie_mac_2018,global,additive,exploratory_retrospective,2,historical_2018_test

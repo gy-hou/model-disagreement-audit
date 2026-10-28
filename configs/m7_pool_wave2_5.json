@@ -1,0 +1,53 @@
+{
+  "candidates": [
+    {
+      "name": "M7_ebm_default_lr01_b256",
+      "interactions": "auto",
+      "learning_rate": 0.01,
+      "max_bins": 256,
+      "max_leaves": 3,
+      "random_state": 20260504
+    },
+    {
+      "name": "M7_ebm_default_lr05_b256",
+      "interactions": "auto",
+      "learning_rate": 0.05,
+      "max_bins": 256,
+      "max_leaves": 3,
+      "random_state": 20260504
+    },
+    {
+      "name": "M7_ebm_noint_lr01_b128",
+      "interactions": 0,
+      "learning_rate": 0.01,
+      "max_bins": 128,
+      "max_leaves": 3,
+      "random_state": 20260504
+    },
+    {
+      "name": "M7_ebm_noint_lr01_b256",
+      "interactions": 0,
+      "learning_rate": 0.01,
+      "max_bins": 256,
+      "max_leaves": 3,
+      "random_state": 20260504
+    },
+    {
+      "name": "M7_ebm_noint_lr05_b128",
+      "interactions": 0,
+      "learning_rate": 0.05,
+      "max_bins": 128,
+      "max_leaves": 3,
+      "random_state": 20260504
+    },
+    {
+      "name": "M7_ebm_noint_lr05_b256",
+      "interactions": 0,
+      "learning_rate": 0.05,
+      "max_bins": 256,
+      "max_leaves": 3,
+      "random_state": 20260504
+    }
+  ],
+  "notes": "Wave 1 C1: interactions=0 variants align M7 with plan6 section 1.2 additive shape functions on individual features. interactions=auto maps to interpret's default interaction setting and is retained for sanity comparison."
+}

@@ -1,0 +1,13 @@
+inst,variant,rep,oof_logloss,oof_hits_AllErr,oof_hits_FN
+freddie_mac,global,R,0.14660361441368144,961,34
+freddie_mac,global,SYM,0.14664144094836992,961,34
+freddie_mac,global,ID,0.14664256283916183,963,34
+freddie_mac,family,R,0.1466065471714751,963,33
+freddie_mac,family,SYM,0.14665996576552015,960,37
+freddie_mac,family,ID,0.14682418589979007,951,35
+fannie_mae,global,R,0.1478254844851251,961,44
+fannie_mae,global,SYM,0.14796067563688103,958,47
+fannie_mae,global,ID,0.1477801134035899,957,47
+fannie_mae,family,R,0.14767524582730426,964,41
+fannie_mae,family,SYM,0.14822082695292266,960,42
+fannie_mae,family,ID,0.1487280440145778,958,41

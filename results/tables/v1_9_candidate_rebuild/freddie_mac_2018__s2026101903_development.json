@@ -1,0 +1,21 @@
+{
+  "base": "freddie_mac_2018",
+  "seed": 2026101903,
+  "status": "ok",
+  "M": 2,
+  "scope": "post_primary_exploratory_candidate_reconstruction",
+  "protocol_sha256": "710f1345a3d960e0a286f9089d7da38e5015a0273be087c34e9bc19e241eb91c",
+  "elapsed_seconds": 184.10757670807652,
+  "candidate_table_sha256": "4c8019f05f0c55c64cf8fa2647052c8d425a5793a9dad3996355991fd78bf7e7",
+  "candidate_ids": [
+    "M7_ebm_noint_lr05_b128",
+    "M7_ebm_noint_lr05_b256"
+  ],
+  "artifact_paths": [
+    "models/v1_9_candidate_rebuild/freddie_mac_2018__s2026101903/M7_ebm_noint_lr05_b128.joblib",
+    "models/v1_9_candidate_rebuild/freddie_mac_2018__s2026101903/M7_ebm_noint_lr05_b256.joblib"
+  ],
+  "audit_models_sha256": "7b7f6af2f372c4997780237e0d2ac0dd328b023f917e1e5228c33a24c15c8491",
+  "development_predictions_sha256": "65878225e48dc33a2d97aa025ee05ab29e99ffd36d04dea8b669332e80a5ba06",
+  "completed_at_utc": "2026-10-19T06:29:28.678437+00:00"
+}

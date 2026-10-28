@@ -1,0 +1,42 @@
+{
+  "version": "v1.9-audit-1",
+  "status": "historical_sensitivity_only_not_a_new_primary_outcome",
+  "legacy": {
+    "name": "ever_60dpd_24m",
+    "window": "provider loan_age 0 through 24 inclusive; 25 possible integers",
+    "event": "numeric delinquency>=2 or RA mapped to 9",
+    "missing": "missing/unparseable status is a false event; any loan with a row in window enters label aggregation",
+    "maturity": "2018/2021/2022 no date gate; 2023 uses first payment cutoff",
+    "caveat": "Freddie loan_age resets at modification, so provider loan_age window is not always original-calendar window"
+  },
+  "strict": {
+    "name": "strict_calendar_age0_24_60plus_or_reo",
+    "calendar_age": "monthly_reporting_period - original first_payment_date in months + 1",
+    "window": "calendar_age in [0,24] inclusive; intentionally preserve 25 possible ages as a sensitivity, not call them exactly 24 observations",
+    "maturity": "original first_payment_date +23 months <= maximum observed monthly_reporting_period in source snapshot",
+    "positive": "mature and any numeric delinquency>=2 or RA in calendar window; RA is REO acquisition, reported separately and explicitly included in composite",
+    "negative": "mature, all calendar ages0..24 have valid status, no invalid in-window status, no unlocated record, no conflicting valid status for same loan-month, and no event",
+    "unknown": "all remaining cases stay missing and excluded from sensitivity evaluation",
+    "terminal_states": "record zero-balance code frequency/occurrence; do not treat any exit code as automatic negative",
+    "scope": "selected outcome-identifiable subgroup, potentially selected by outcomes and servicing; cannot recover all-originations risk or unbiased audit benefit",
+    "new_definition_not_substituted_for_legacy": true
+  },
+  "documentation": {
+    "provider_pdf": "data/raw/freddie_mac_samples_2018_2025/freddie_sflld_user_guide.pdf",
+    "pages": [
+      10,
+      11,
+      15,
+      16
+    ],
+    "url": "https://www.freddiemac.com/fmac-resources/research/pdf/user_guide.pdf",
+    "file_sha256": "5ac153ec13ee306064747059b624c3da2f5b7ab793d2292e79c35a169bbdcbf4"
+  },
+  "prospective_requirements": [
+    "retain original download/release snapshot timestamp",
+    "development label availability <= freeze date <= claimed queue date",
+    "do not reinterpret 2026 model fitting as historical 2018 deployment",
+    "source cutoff is not provider release date"
+  ],
+  "fannie_status": "existing servicing audit checked raw-age presence or any exit, not the new strict original-calendar contract; not silently upgraded"
+}

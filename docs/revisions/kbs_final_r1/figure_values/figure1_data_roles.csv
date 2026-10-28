@@ -1,0 +1,5 @@
+data_role,cases_per_institution,actual_use
+2018 training,30000,Credit models and preprocessing
+2018 validation,10000,"Candidate eligibility, threshold, historical calibration"
+2018 former test,10000,Five-fold audit-model and policy development
+2021–2023 historical cohorts,,Frozen-system retrospective evaluation

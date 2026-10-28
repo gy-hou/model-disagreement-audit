@@ -1,0 +1,37 @@
+{
+  "base": "fannie_mae_2018",
+  "seed": 2026101902,
+  "status": "ok",
+  "M": 10,
+  "scope": "post_primary_exploratory_candidate_reconstruction",
+  "protocol_sha256": "710f1345a3d960e0a286f9089d7da38e5015a0273be087c34e9bc19e241eb91c",
+  "elapsed_seconds": 296.1156563339755,
+  "candidate_table_sha256": "ba05f1ed8428305392d8e858cb52023d4221967e065f61f9673e91f773b9803c",
+  "candidate_ids": [
+    "M1_lr_l2_raw",
+    "M1_lr_l2_engineered_C1",
+    "M1_lr_l2_engineered_C0p1",
+    "M1_lr_l1_engineered_C1",
+    "M1_lr_l1_engineered_C0p5",
+    "M1_lr_elasticnet_engineered",
+    "M2_xgb_d4_lr05_n300",
+    "M2_xgb_d4_lr1_n200",
+    "M2_xgb_d3_lr03_n400",
+    "M7_ebm_noint_lr05_b256"
+  ],
+  "artifact_paths": [
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101902/M1_lr_l2_raw.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101902/M1_lr_l2_engineered_C1.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101902/M1_lr_l2_engineered_C0p1.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101902/M1_lr_l1_engineered_C1.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101902/M1_lr_l1_engineered_C0p5.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101902/M1_lr_elasticnet_engineered.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101902/M2_xgb_d4_lr05_n300.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101902/M2_xgb_d4_lr1_n200.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101902/M2_xgb_d3_lr03_n400.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101902/M7_ebm_noint_lr05_b256.joblib"
+  ],
+  "audit_models_sha256": "c9178197c9c2d7030bb7e62e998b1e96dd53637ac1bad64828244b8581c3469c",
+  "development_predictions_sha256": "85b0f0ee16a7d875867a979547be2370f6df75a49ebcaee687571bc4cca876ca",
+  "completed_at_utc": "2026-10-19T06:30:03.910563+00:00"
+}

@@ -1,0 +1,4 @@
+gradient_inf,information,n_train,objective,original_error,reference_gradient_inf,reference_objective_gap,reference_prediction_max_gap,seed,solver
+1.0113277753021066e-09,W,80000,0.22571944417015513,Logistic fit failed for E_qualified: ABNORMAL: ,3.1433113643098304e-10,2.7755575615628914e-17,1.0194190977474982e-09,261020109,L-BFGS-B maxls100; BFGS cross-check
+1.0875961805822954e-09,W,80000,0.22701209702887684,Logistic fit failed for E_qualified: ABNORMAL: ,2.6041050205094508e-12,2.7755575615628914e-17,1.383509751207157e-09,261020183,L-BFGS-B maxls100; BFGS cross-check
+1.1121093805854798e-09,W,80000,0.2273147590165197,Logistic fit failed for E_qualified: ABNORMAL: ,2.7410280267758935e-12,2.7755575615628914e-17,1.3253154823589242e-09,261020193,L-BFGS-B maxls100; BFGS cross-check

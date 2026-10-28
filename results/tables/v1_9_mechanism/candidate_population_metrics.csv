@@ -1,0 +1,25 @@
+scenario,model,auc,brier,auc_gap_from_best,passes_population_global_auc_010,brier_excess_vs_deployment,eligibility_scope
+A_exact,reference_deployment,0.7292317708333331,0.03551990000000001,0.0,True,0.0,population diagnostic only; no empirical selection imposed
+A_exact,candidate_lower,0.7292317708333331,0.035522,0.0,True,2.099999999990998e-06,population diagnostic only; no empirical selection imposed
+A_exact,candidate_center,0.7292317708333331,0.03551990000000001,0.0,True,0.0,population diagnostic only; no empirical selection imposed
+A_exact,candidate_upper,0.7292317708333331,0.035522,0.0,True,2.099999999990998e-06,population diagnostic only; no empirical selection imposed
+A_independent_jitter,reference_deployment,0.7292317708333333,0.03551990000000001,0.0,True,0.0,population diagnostic only; no empirical selection imposed
+A_independent_jitter,candidate_lower,0.7292317708333333,0.035522021,0.0,True,2.1209999999938223e-06,population diagnostic only; no empirical selection imposed
+A_independent_jitter,candidate_center,0.7292317708333333,0.03551990000000001,0.0,True,0.0,population diagnostic only; no empirical selection imposed
+A_independent_jitter,candidate_upper,0.7292317708333333,0.035522021,0.0,True,2.1209999999938223e-06,population diagnostic only; no empirical selection imposed
+B_boundary_weak,reference_deployment,0.6295929257508767,0.05811000000000001,0.017787264318747664,False,0.0,population diagnostic only; no empirical selection imposed
+B_boundary_weak,candidate_lower,0.6118056614321289,0.058135000000000006,0.03557452863749544,False,2.4999999999997247e-05,population diagnostic only; no empirical selection imposed
+B_boundary_weak,candidate_center,0.6295929257508767,0.05811000000000001,0.017787264318747664,False,0.0,population diagnostic only; no empirical selection imposed
+B_boundary_weak,candidate_upper,0.6473801900696243,0.058095,0.0,True,-1.5000000000008062e-05,population diagnostic only; no empirical selection imposed
+B_boundary_primary,reference_deployment,0.6295929257508767,0.05811,0.04446816079686933,False,0.0,population diagnostic only; no empirical selection imposed
+B_boundary_primary,candidate_lower,0.5851247649540072,0.058164999999999994,0.08893632159373877,False,5.4999999999992555e-05,population diagnostic only; no empirical selection imposed
+B_boundary_primary,candidate_center,0.6295929257508767,0.05811,0.04446816079686933,False,0.0,population diagnostic only; no empirical selection imposed
+B_boundary_primary,candidate_upper,0.674061086547746,0.058065000000000005,0.0,True,-4.499999999999643e-05,population diagnostic only; no empirical selection imposed
+C_information_no_boundary,reference_deployment,0.7347096891805671,0.04108,0.011678516087867963,False,0.0,population diagnostic only; no empirical selection imposed
+C_information_no_boundary,candidate_lower,0.7230311730926989,0.041094,0.023357032175736148,False,1.4000000000000123e-05,population diagnostic only; no empirical selection imposed
+C_information_no_boundary,candidate_center,0.7347096891805671,0.04108,0.011678516087867963,False,0.0,population diagnostic only; no empirical selection imposed
+C_information_no_boundary,candidate_upper,0.7463882052684351,0.041076,0.0,True,-3.9999999999970615e-06,population diagnostic only; no empirical selection imposed
+D_control_approximation,reference_deployment,0.5000000000000001,0.12376639436359757,0.13794010078067376,False,0.0,population diagnostic only; no empirical selection imposed
+D_control_approximation,candidate_lower,0.3620598992193263,0.12142805770189494,0.27588020156134757,False,-0.0023383366617026335,population diagnostic only; no empirical selection imposed
+D_control_approximation,candidate_center,0.5,0.12074102347182639,0.13794010078067387,False,-0.003025370891771184,population diagnostic only; no empirical selection imposed
+D_control_approximation,candidate_upper,0.6379401007806739,0.12009398924175785,0.0,True,-0.0036724051218397225,population diagnostic only; no empirical selection imposed

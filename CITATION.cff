@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Please cite this versioned research-code repository if you use its code or aggregate results."
+type: software
+title: "From Model Disagreement to Audit Value: Conditional Information and Budget Boundaries — Research Code"
+authors:
+  - family-names: Hou
+    given-names: Guangyu
+  - family-names: Zhang
+    given-names: Wei
+  - family-names: He
+    given-names: Jie
+  - family-names: Liu
+    given-names: Zhiying
+  - family-names: Wang
+    given-names: Mengou
+version: "kbs-final-r5"
+date-released: "2026-10-29"
+repository-code: "https://github.com/gy-hou/model-disagreement-audit"
+url: "https://github.com/gy-hou/model-disagreement-audit/releases/tag/kbs-final-r5"
+license: MIT
+keywords:
+  - predictive multiplicity
+  - audit prioritization
+  - conditional information
+  - resource allocation
+  - credit risk

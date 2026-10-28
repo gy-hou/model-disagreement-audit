@@ -1,0 +1,1 @@
+Nature Figure QA utilities, copied unchanged from Yuan1z0825/nature-skills commit 07009f91f99c7108519e7657885f1a89d91099d5. Apache-2.0 license is retained in LICENSE.md. These inspect final figure artifacts; they do not supply scientific data. Collision audit additionally requires PyMuPDF >=1.24,<2.0.

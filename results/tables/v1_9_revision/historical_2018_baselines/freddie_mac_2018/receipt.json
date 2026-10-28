@@ -1,0 +1,13 @@
+{
+  "completed_at_utc": "2026-10-19T06:00:23.367649+00:00",
+  "scope": "historical_2018_exploratory_development",
+  "plan_sha256": "30d80bc7098dba731268ca506275bc8a9292b0f70b338ecbef0e884936b724dd",
+  "dataset_sha256": "d16a5bdd56838de95b96c3e1cfc57012299168effa641797f21db108cf424f6e",
+  "bootstrap": 1999,
+  "endpoint": "historical recorded loan-age-based endpoint",
+  "results": {
+    "performance.csv": "6627bb2276bdea54a50c0a341b360e18f7520d3e70e398f7854ac2b6fa11a068",
+    "decomposition.csv": "0a2a845c17bd9053f45eb4c94bcf3f0a12f7504174ba59b07f31af069fd70421",
+    "paired_contrasts.csv": "93d38b1c6262e6267c219a4415ef77ce66fae8883c9c94c6a565d6dd252707e7"
+  }
+}

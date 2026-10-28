@@ -1,0 +1,15 @@
+[
+  {
+    "at_utc": "2026-10-19T08:22:54.883761+00:00",
+    "protocol_sha256": "79e98e184c4bc4ce40e35858e88fd7434ebd0039342f8cc95071a5ba77a0a92e",
+    "original_source_sha256": "3d50f8c8e498a5f541c36426266f4f9f8e478ae0a829961d21f26771aee7e0dd",
+    "source_sha256": "63b483beeda1a21931160e35723843e3a306136109c4534214c35855a8730d28",
+    "original_test_sha256": "6a24c7c4d0813745872a06156ff31019ca69ca2e81bcef85f501e0efc7d6897f",
+    "test_sha256": "325c87e633bf0e2a71bd8341789805f1e6fc5d041259f5d3ec1316b6c77e095b",
+    "reason": "Production failed at seed 261020109 with original L-BFGS-B ABNORMAL before any MC result file was written. Keep design, all seeds, samples, objective, ridge and maxiter unchanged. On original solver failure only, increase line-search maxls to100 and verify against independent BFGS; gradient infinity norms<=1e-7, objective gap<=1e-10, predicted-probability gap<=1e-6. Restart complete 300 seeds, no dropped repetitions.",
+    "original_source_archive": "initial_frozen_source.py",
+    "original_test_archive": "initial_frozen_tests.py",
+    "statistical_design_changed": false,
+    "completed_results_existed": false
+  }
+]

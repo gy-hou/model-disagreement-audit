@@ -1,0 +1,69 @@
+{
+  "figure": "protocol_v1_10",
+  "size_inches": [
+    6.3,
+    4.1
+  ],
+  "problems": [],
+  "fonts": [
+    "Arial-BoldMT",
+    "Arial-ItalicMT",
+    "ArialMT"
+  ],
+  "texts": [
+    "$C_{\\rm audit}$, five folds",
+    "1",
+    "1 without 2 · §4.1",
+    "2",
+    "2 without 3 at 20% · §6.3",
+    "2018 former test: 10,000",
+    "2018 training: 30,000",
+    "2018 validation: 10,000",
+    "2021–2023 former test",
+    "26-model candidate grid",
+    "3",
+    "A  Three claims and the evidence that separates them",
+    "Added information",
+    "B  Mortgage protocol, per institution",
+    "Budget: 10% of each cohort",
+    "Candidate construction",
+    "Consensus $C$, range $D$ over $R$",
+    "Construction E",
+    "Contrasts: G2 − G1, full − base",
+    "Exact counterexample",
+    "Extra target hits",
+    "Five-fold OOF policy choice",
+    "Fixed-policy evaluation",
+    "Full-data refit",
+    "G0",
+    "G0 + consensus $C$",
+    "G1",
+    "G1 + ",
+    "G2",
+    "Global AUC gate → set $R$",
+    "Matched G2 − G1",
+    "Models and policy index frozen",
+    "Queues differ",
+    "Read with: score geometry (Fig. 3) · remaining hit capacity (Eq. 6) · candidate reconstructions (Fig. 7)",
+    "Reference score $S$, threshold $\\tau$",
+    "Six institution–vintage cohorts",
+    "Target-aligned audit\ndevelopment",
+    "Targets: all errors, FN",
+    "at the declared budget",
+    "beyond $S$ and consensus",
+    "different cases reviewed",
+    "logit $S$",
+    "measures 3 · §6.4–6.6",
+    "range $D$"
+  ],
+  "outputs": {
+    "protocol_v1_10.pdf": "00b24e49ad6217e4f3de9b1e0fd8908efd0e4169d232bd36ca107149e7482d4d",
+    "protocol_v1_10.svg": "f5a54724aa741b06059dcb0783aff5510237be515e3199998a3be93441e45070",
+    "protocol_v1_10.png": "ec6bb9fc1026ee88b8b2c1b61d538e37ba8b07811fa82cd55960929542ecad49"
+  },
+  "inputs": {
+    "results/tables/v1_10_presentation/figure1_data_roles.csv": "bcd49e035de9279af6d0a10aca0ce12ef088bd9aed1b29692ae9f553398d861e"
+  },
+  "script_sha256": "7719b76ce76eb1995456eaa7a7d329de9b1c7a7d55c79ccf515823bd3cfac0d5",
+  "scientific_rerun": false
+}

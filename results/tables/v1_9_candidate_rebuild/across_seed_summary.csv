@@ -1,0 +1,13 @@
+cohort,target,valid_seeds,hits_min,hits_max,capture_min,capture_max,pointwise_lower_min,pointwise_upper_max,interpretation
+freddie_mac_2021,AllErr,3,1,2,0.0027173913043478,0.0054347826086956,-0.0081125387682764,0.0185826535208447,descriptive span over three fixed reconstructions; not a confidence interval over training randomness
+freddie_mac_2021,FN,3,-1,1,-0.0073529411764705,0.0073529411764705,-0.0344977511244377,0.0615437302423603,descriptive span over three fixed reconstructions; not a confidence interval over training randomness
+freddie_mac_2022,AllErr,3,-5,5,-0.0011823126034523,0.0011823126034523,-0.002152853115993,0.0030893903289917,descriptive span over three fixed reconstructions; not a confidence interval over training randomness
+freddie_mac_2022,FN,3,-2,-1,-0.0246913580246913,-0.0123456790123456,-0.0833835341365461,0.0659706959706959,descriptive span over three fixed reconstructions; not a confidence interval over training randomness
+freddie_mac_2023,AllErr,3,0,1,0.0,0.0002320724065908,-0.0006965890999911,0.0006997982266542,descriptive span over three fixed reconstructions; not a confidence interval over training randomness
+freddie_mac_2023,FN,3,0,0,0.0,0.0,-0.08,0.1176470588235294,descriptive span over three fixed reconstructions; not a confidence interval over training randomness
+fannie_mae_2021,AllErr,3,-1,1,-0.0012886597938144,0.0012886597938144,-0.0053561937296066,0.0054573986685453,descriptive span over three fixed reconstructions; not a confidence interval over training randomness
+fannie_mae_2021,FN,3,-2,1,-0.0188679245283018,0.0094339622641509,-0.04,0.0300306122448979,descriptive span over three fixed reconstructions; not a confidence interval over training randomness
+fannie_mae_2022,AllErr,3,0,2,0.0,0.0007504690431519,-0.002272399001105,0.0022901200563119,descriptive span over three fixed reconstructions; not a confidence interval over training randomness
+fannie_mae_2022,FN,3,-2,1,-0.0227272727272727,0.0113636363636363,-0.0588235294117647,0.0531914893617021,descriptive span over three fixed reconstructions; not a confidence interval over training randomness
+fannie_mae_2023,AllErr,3,-2,0,-0.0004312203536006,0.0,-0.0010794939715152,0.000451320583968,descriptive span over three fixed reconstructions; not a confidence interval over training randomness
+fannie_mae_2023,FN,3,0,2,0.0,0.0588235294117647,-0.0715156794425087,0.125,descriptive span over three fixed reconstructions; not a confidence interval over training randomness

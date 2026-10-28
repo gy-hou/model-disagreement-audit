@@ -1,0 +1,412 @@
+{
+  "status": "PASS",
+  "date": "2026-10-29",
+  "scope": "Exact deterministic calculations, 40 implementation tests, and aggregate-only presentation/report rebuilds. No production training or full scientific simulations.",
+  "environment": {
+    "python": "3.14.3",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.9",
+    "pytest": "9.0.3",
+    "Pillow": "12.2.0",
+    "interpret": "0.7.8",
+    "xgboost": "3.2.0"
+  },
+  "checks": [
+    {
+      "name": "qualified_design",
+      "command": [
+        "python",
+        "src/mechanism_v1_10.py",
+        "design"
+      ],
+      "exit_code": 0,
+      "seconds": 1.043,
+      "log": "qualified_design.log"
+    },
+    {
+      "name": "exact_identity",
+      "command": [
+        "python",
+        "idea-update/scripts/00_exact_construction.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.023,
+      "log": "exact_identity.log"
+    },
+    {
+      "name": "theory_family",
+      "command": [
+        "python",
+        "idea-update/scripts/08_theory_family.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.041,
+      "log": "theory_family.log"
+    },
+    {
+      "name": "implementation_tests",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_mechanism_v1_9.py",
+        "tests/test_audit_revision_v1_9.py",
+        "tests/test_candidate_rebuild_v1_9.py",
+        "tests/test_mechanism_v1_10.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.939,
+      "log": "implementation_tests.log"
+    },
+    {
+      "name": "main_figures_r1",
+      "command": [
+        "python",
+        "docs/revisions/kbs_final_r1/rebuild_figures.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.715,
+      "log": "main_figures_r1_retry.log",
+      "restored_baseline_dependency_files": [
+        {
+          "file": "paper/kbs_final_r1/figures/final_mechanisms.pdf",
+          "sha256": "3c6ce6c5504821b19818c3d8fe81639e1accbdaaa131a70b8ea59220ef6e76da",
+          "source_archive": "analysis_aggregate_final_r5.zip"
+        },
+        {
+          "file": "paper/kbs_final_r1/figures/final_mechanisms.svg",
+          "sha256": "91d33820a62c7b3845bca9ddebd5198f89b6affc5df7c931a6dfc61a15e5a92c",
+          "source_archive": "analysis_aggregate_final_r5.zip"
+        },
+        {
+          "file": "paper/kbs_final_r1/figures/final_mechanisms.png",
+          "sha256": "21eddd73b689b2c6dcbf7cf7bc47a822b857ac4a11e0b281a00c534c4fcd6b19",
+          "source_archive": "analysis_aggregate_final_r5.zip"
+        }
+      ]
+    },
+    {
+      "name": "figure1_r3",
+      "command": [
+        "python",
+        "docs/revisions/kbs_final_r3/rebuild_figure1.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.151,
+      "log": "figure1_r3.log"
+    },
+    {
+      "name": "supplementary_displays",
+      "command": [
+        "python",
+        "src/render_revision_v1_11.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.38,
+      "log": "supplementary_displays.log"
+    },
+    {
+      "name": "discovery_report",
+      "command": [
+        "python",
+        "idea-update/scripts/15_discovery_report.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.547,
+      "log": "discovery_report.log"
+    }
+  ],
+  "implementation_tests": {
+    "passed": 40,
+    "failed": 0,
+    "uses_small_synthetic_fixtures": true
+  },
+  "input_preservation": {
+    "initial_files": 490,
+    "protected_scientific_inputs": 462,
+    "changed_scientific_inputs": [],
+    "changed_existing_presentation_or_qa_files": []
+  },
+  "figure_data_equality": {
+    "tables": 13,
+    "all_cells_equal": true,
+    "source_hashes_checked": 35
+  },
+  "supplementary_generated_value_count": 288,
+  "resolved_dependency": {
+    "initial_failure": "Main figure renderer expected three pre-existing construction figure baselines for intermediate hash checks.",
+    "restored_from_original_archive": [
+      {
+        "file": "paper/kbs_final_r1/figures/final_mechanisms.pdf",
+        "sha256": "3c6ce6c5504821b19818c3d8fe81639e1accbdaaa131a70b8ea59220ef6e76da",
+        "source_archive": "analysis_aggregate_final_r5.zip",
+        "original_byte_identical_to_r5": true,
+        "staged_original_present": true
+      },
+      {
+        "file": "paper/kbs_final_r1/figures/final_mechanisms.svg",
+        "sha256": "91d33820a62c7b3845bca9ddebd5198f89b6affc5df7c931a6dfc61a15e5a92c",
+        "source_archive": "analysis_aggregate_final_r5.zip",
+        "original_byte_identical_to_r5": true,
+        "staged_original_present": true
+      },
+      {
+        "file": "paper/kbs_final_r1/figures/final_mechanisms.png",
+        "sha256": "21eddd73b689b2c6dcbf7cf7bc47a822b857ac4a11e0b281a00c534c4fcd6b19",
+        "source_archive": "analysis_aggregate_final_r5.zip",
+        "original_byte_identical_to_r5": true,
+        "staged_original_present": true
+      }
+    ]
+  },
+  "regenerated_vs_current_artwork_byte_equal": {
+    "protocol_v1_10.pdf": true,
+    "historical_targets_v1_10.pdf": true,
+    "score_geometry_v1_10.pdf": true,
+    "final_mechanisms.pdf": true,
+    "incremental_capture_v1_10.pdf": true,
+    "frozen_selection_v1_10.pdf": true,
+    "candidate_stability_v1_10.pdf": true
+  },
+  "outputs": {
+    "paper/kbs_final_r1/figures/final_mechanisms.png": {
+      "sha256": "21eddd73b689b2c6dcbf7cf7bc47a822b857ac4a11e0b281a00c534c4fcd6b19",
+      "bytes": 378386
+    },
+    "paper/kbs_final_r1/figures/frozen_selection_v1_10.svg": {
+      "sha256": "0dbfb1415df1b2493bf1c3bee5961106613c04386f29c1b7bef93687c03824eb",
+      "bytes": 16488
+    },
+    "paper/kbs_final_r1/figures/final_mechanisms.pdf": {
+      "sha256": "3c6ce6c5504821b19818c3d8fe81639e1accbdaaa131a70b8ea59220ef6e76da",
+      "bytes": 51544
+    },
+    "paper/kbs_final_r1/figures/score_geometry_v1_10.pdf": {
+      "sha256": "448fd80188e4d5f4d38435f35e152e4c37b7210e97cd0f7037e406b773e960e2",
+      "bytes": 49797
+    },
+    "paper/kbs_final_r1/figures/protocol_v1_10.png": {
+      "sha256": "3d1121e97d92309c721d973773e93807bd95657b0f91cbba37314b00e578b40a",
+      "bytes": 192893
+    },
+    "paper/kbs_final_r1/figures/incremental_capture_v1_10.pdf": {
+      "sha256": "dbd4b79c3e0c3ef981aa6d8dcca53dc831f65c10c94c33f8cf11ccfb08e9d08a",
+      "bytes": 38975
+    },
+    "paper/kbs_final_r1/figures/incremental_capture_v1_10.png": {
+      "sha256": "faee06c0232714173474496689c7728c91c66c4a9da5db7697b12ab01e054a42",
+      "bytes": 236238
+    },
+    "paper/kbs_final_r1/figures/protocol_v1_10.pdf": {
+      "sha256": "9f947f37464eb474395e79dc0fcedc5aee1774413940796ed8b506026016b574",
+      "bytes": 45273
+    },
+    "paper/kbs_final_r1/figures/score_geometry_v1_10.png": {
+      "sha256": "c0ce03c4338e986a51f39dc29fb819cc0fb33440c107307689a6b8d3a4739f3d",
+      "bytes": 212010
+    },
+    "paper/kbs_final_r1/figures/score_geometry_v1_10.svg": {
+      "sha256": "a24b27e8d7788b8bbed7ab86973410af4b66198af6dd8d33263ed0acbe66e005",
+      "bytes": 79272
+    },
+    "paper/kbs_final_r1/figures/incremental_capture_v1_10.svg": {
+      "sha256": "8bd1b845e4a7e966dc8551bb1393530ca6707e27832dfba5625b1490ebb84f8e",
+      "bytes": 35144
+    },
+    "paper/kbs_final_r1/figures/protocol_v1_10.svg": {
+      "sha256": "04476d0390d17808f72c5390dcbb22cb4ad63b8b788b2086e9df6ce810651a94",
+      "bytes": 10695
+    },
+    "paper/kbs_final_r1/figures/frozen_selection_v1_10.pdf": {
+      "sha256": "c7619bb2512b88dcf9181764d493cc5732ab49d32609b727859b32c3c26c8b3a",
+      "bytes": 42249
+    },
+    "paper/kbs_final_r1/figures/frozen_selection_v1_10.png": {
+      "sha256": "d2d6f133906e44c3fc3ff8817610790278ebce48de6e496555cd36a4ebec70b1",
+      "bytes": 183413
+    },
+    "paper/kbs_final_r1/figures/final_mechanisms.svg": {
+      "sha256": "91d33820a62c7b3845bca9ddebd5198f89b6affc5df7c931a6dfc61a15e5a92c",
+      "bytes": 37740
+    },
+    "paper/kbs_final_r1/figures/historical_targets_v1_10.pdf": {
+      "sha256": "26fbcc34b5042561430c394540af2c3d7e080ebc791c89d3de2035d25b116a98",
+      "bytes": 39452
+    },
+    "paper/kbs_final_r1/figures/historical_targets_v1_10.png": {
+      "sha256": "0c96b34947cd70bb06ee6f164fdf66a37fd0627b4b71eb09fca43a432eb79d74",
+      "bytes": 148338
+    },
+    "paper/kbs_final_r1/figures/candidate_stability_v1_10.png": {
+      "sha256": "d935c07050d4b632b367f3fe1155224cdd9a9793f335727702266c7fd705318c",
+      "bytes": 143861
+    },
+    "paper/kbs_final_r1/figures/candidate_stability_v1_10.pdf": {
+      "sha256": "a0056d8606199d017adc3f62bdfecb18a7b2e29410344655022fb3d33d022f8a",
+      "bytes": 40339
+    },
+    "paper/kbs_final_r1/figures/candidate_stability_v1_10.svg": {
+      "sha256": "a1b191f36e199037ae5ccc7b902eb3d0251e198cc7a72cb4a8d3631befd2818a",
+      "bytes": 39534
+    },
+    "paper/kbs_final_r1/figures/historical_targets_v1_10.svg": {
+      "sha256": "947af1c3fd676aa79c6cddc822a04b74e1f545d4da7091cdfb8a97e02c276768",
+      "bytes": 42625
+    },
+    "paper/kbs_final_r3/figures/protocol_v1_10.png": {
+      "sha256": "ec6bb9fc1026ee88b8b2c1b61d538e37ba8b07811fa82cd55960929542ecad49",
+      "bytes": 278545
+    },
+    "paper/kbs_final_r3/figures/protocol_v1_10.pdf": {
+      "sha256": "00b24e49ad6217e4f3de9b1e0fd8908efd0e4169d232bd36ca107149e7482d4d",
+      "bytes": 55772
+    },
+    "paper/kbs_final_r3/figures/protocol_v1_10.svg": {
+      "sha256": "f5a54724aa741b06059dcb0783aff5510237be515e3199998a3be93441e45070",
+      "bytes": 33880
+    },
+    "paper/kbs_final_r3_zh/figures/protocol_v1_10.png": {
+      "sha256": "ec6bb9fc1026ee88b8b2c1b61d538e37ba8b07811fa82cd55960929542ecad49",
+      "bytes": 278545
+    },
+    "paper/kbs_final_r3_zh/figures/protocol_v1_10.pdf": {
+      "sha256": "00b24e49ad6217e4f3de9b1e0fd8908efd0e4169d232bd36ca107149e7482d4d",
+      "bytes": 55772
+    },
+    "paper/kbs_final_r3_zh/figures/protocol_v1_10.svg": {
+      "sha256": "f5a54724aa741b06059dcb0783aff5510237be515e3199998a3be93441e45070",
+      "bytes": 33880
+    },
+    "paper/v1_11/generated/numbers.tex": {
+      "sha256": "e99e2c4e49a07f3f154026113dc97c3ba77a317f3b06660b663fc1975477134c",
+      "bytes": 19003
+    },
+    "paper/v1_11/generated/s_mo_unseen.tex": {
+      "sha256": "e67db330ff09a05ec9a6e34d018a0e4f61ac2d9a6dca305d099cb9d8eb2ecbdf",
+      "bytes": 1367
+    },
+    "paper/v1_11/generated/s_mo_consensus.tex": {
+      "sha256": "ebea6a8dab4f743d4551818b2eb28872f6fc9f5412bc136b04bc9ee074a5e8cc",
+      "bytes": 14147
+    },
+    "paper/v1_11/generated/s_mo_stacking.tex": {
+      "sha256": "2ee901a0fc463300c8a477416d20b07d6576e4bf22421ecd17b95db13462975a",
+      "bytes": 2249
+    },
+    "paper/v1_11/generated/s_mo_outcome.tex": {
+      "sha256": "56b7b263a2a04086e4d4dd3c0b0ce1e94d0f8ceb14a2e0d0f936a7ef5e02adfc",
+      "bytes": 328
+    },
+    "paper/v1_11/generated/s_disc_roles.tex": {
+      "sha256": "3c8253bdc56e767cc5f8134a4c4ed096e64ad802f260ede5daff5f8a0318f433",
+      "bytes": 1779
+    },
+    "paper/v1_11/generated/tab_construction.tex": {
+      "sha256": "bd242a69aaefcfca9d3fabd95156cad55ce4e91227ecdbde87bc5e7f047b6be0",
+      "bytes": 636
+    },
+    "paper/v1_11/generated/s_mo_sameseed.tex": {
+      "sha256": "ad70c4641f03c478b9297d04bd5784128697a09257f16ef4b18907add53bb5bd",
+      "bytes": 2876
+    },
+    "paper/v1_11/generated/s_mo_stability.tex": {
+      "sha256": "226b2122b5700a9203e228d216cbedee6bd2509a8ca5142f854bd10730761329",
+      "bytes": 1879
+    },
+    "paper/v1_11/generated/tab_mortgage.tex": {
+      "sha256": "8e6210cf1676fb7c89e95ffade7591e445346ff9ac44632e78563394608db46b",
+      "bytes": 1542
+    },
+    "paper/v1_11/generated/numbers.json": {
+      "sha256": "d78be56702eeffa83829935650af1ed28e6ef7e9c9e94ab265cbf4f0bafaf43b",
+      "bytes": 9733
+    },
+    "paper/v1_11/generated/tab_strict.tex": {
+      "sha256": "46434145c2169cf4b41e8e1bc78324b94251c9ae906d8952439d56aa2027b0df",
+      "bytes": 931
+    },
+    "paper/v1_11/generated/s_disc_methods.tex": {
+      "sha256": "5fc8aa84193129df8241d5ab3a99ae22bd96f3106f3463165d6f993d7dde88c1",
+      "bytes": 5170
+    },
+    "paper/v1_11/generated/s_constructionE.tex": {
+      "sha256": "d92b550773f8a905a4521acd822b078cc064b804380b2d8f646cbad947973001",
+      "bytes": 668
+    },
+    "paper/v1_11/generated/s_mo_step2.tex": {
+      "sha256": "584d460f5906aec4f0bc3eaa8a27826cd244f07bf8a7958a7d250b05906624c7",
+      "bytes": 12444
+    },
+    "paper/v1_11/generated/s_mo_fullfeature.tex": {
+      "sha256": "a05633d6a60700ed2abeefa7b709e2ae5654aa3e88c6dd012733469f62468286",
+      "bytes": 7604
+    },
+    "paper/v1_11/generated/s_poscontrol.tex": {
+      "sha256": "c8559f72deabf5f31e714304b9beb6cf50eb29ef84ab097351c7c8917a1e188c",
+      "bytes": 1309
+    },
+    "paper/v1_11/generated/tab_discovery.tex": {
+      "sha256": "63b4ba6c220a57c015e95fe69c948ffecf11ea57d5d9acacb7a4a434695cf5bf",
+      "bytes": 1262
+    },
+    "paper/v1_11/generated/s_disc_contrasts.tex": {
+      "sha256": "d3e240a6479c9465f266b71fa24adbf4bef201036f42edc898e481f223454635",
+      "bytes": 17882
+    },
+    "paper/v1_11/generated/s_mo_toure.tex": {
+      "sha256": "ee2f1d18dbae2947f5c4ec574f42b6c006ee8db15f1ab61c379b81b2ca6cdcd1",
+      "bytes": 8732
+    },
+    "paper/v1_11/figures/fig_discovery.png": {
+      "sha256": "35feb798f0d63c2fdae74ab15fb7532041045fd4e0e9edcc10328b6ff13fbad5",
+      "bytes": 61912
+    },
+    "paper/v1_11/figures/fig_discovery.pdf": {
+      "sha256": "59534870c462bcae58441289457ad28d7f1c7625352dd36024c9f37246c0a086",
+      "bytes": 22356
+    },
+    "paper/v1_11/figures/fig_poscontrol.pdf": {
+      "sha256": "419673b084ebe6103b1de3b5503419377f98cb8086d8f35ae97e1ea9ffcbe5fc",
+      "bytes": 18503
+    },
+    "paper/v1_11/figures/fig_poscontrol.png": {
+      "sha256": "413093009686b7195f16ac0f5a06861ab6fa579615b91656c15d2d1dee12a8be",
+      "bytes": 64224
+    },
+    "paper/v1_11/figures/fig_theory.png": {
+      "sha256": "7aee8429d3902bbf88f70e17f1050a22c75437e077a2e6c621794a1cb0c0ee65",
+      "bytes": 106922
+    },
+    "paper/v1_11/figures/fig_theory.pdf": {
+      "sha256": "98deecda5dac2bcda471de46cc8517211bdb9b483b0cfef94c05cb70a3acc0d4",
+      "bytes": 22781
+    },
+    "idea-update/results/14_report.md": {
+      "sha256": "2fe77ae01eab542985c60f30331adfb18f1b70b1d32a21cce2929df2bc3fc57e",
+      "bytes": 22600
+    },
+    "docs/revisions/kbs_final_r1/FIGURE_VALIDATION.json": {
+      "sha256": "22277265e073521083796f51951b2a2f63c0b6815081a23091d495bd5bfdcb94",
+      "bytes": 15692
+    },
+    "docs/revisions/kbs_final_r3/FIGURE1_QA.json": {
+      "sha256": "865e8afcc55126bb47003c3f6a240acea01e504d5a214724ed29133494296489",
+      "bytes": 2094
+    }
+  },
+  "staged_source_modified_by_validation": false,
+  "network_accessed_by_validation": false,
+  "restricted_empirical_data_accessed": false,
+  "scientific_simulations_rerun": false,
+  "production_models_trained": false,
+  "limitations": [
+    "Validation used the existing recorded Python environment, not a fresh dependency installation.",
+    "Passing implementation tests does not establish an independent empirical replication.",
+    "Public empirical reconstruction still requires separately authorized data, row mappings, prediction caches and saved models."
+  ],
+  "staged_scientific_inputs_match_validated_copy": true
+}

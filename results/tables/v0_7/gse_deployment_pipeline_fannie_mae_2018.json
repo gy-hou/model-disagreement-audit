@@ -1,0 +1,44 @@
+{
+  "artifacts": {
+    "candidate_metrics": "results/tables/v0_7/candidate_pool_metrics_fannie_mae_2018.csv",
+    "committee_range": "results/scores/v0_7_fannie_mae_2018/committee_range.csv",
+    "grid_rc": "results/scores/v0_7_fannie_mae_2018/rc_per_instance.csv",
+    "m2_predictions": "results/scores/v0_7_fannie_mae_2018/m2_predictions.csv",
+    "selected_voters": "results/tables/v0_7/selected_voters_fannie_mae_2018.json"
+  },
+  "base_rate_threshold": 0.0414,
+  "base_rate_threshold_source": "data/processed/fannie_mae_2018_ever_60dpd_24m/val.parquet",
+  "committee_m2_candidate_id": "M2_xgb_d6_lr05_n300",
+  "deployment_m2_candidate_id": "M2_xgb_d3_lr03_n400",
+  "deployment_seed": 20260504,
+  "grid_candidate_count": 26,
+  "grid_rashomon_count": 20,
+  "grid_rc_range_median": 0.02930304242747291,
+  "grid_rc_range_q90": 0.09014312982181806,
+  "k_cov": 4,
+  "m2_test_auc": 0.7947855215587143,
+  "r_ref_used": false,
+  "selected_voters": [
+    {
+      "axis": 1,
+      "candidate_id": "M1_lr_l2_engineered_C0p1",
+      "model_id": "M1"
+    },
+    {
+      "axis": 2,
+      "candidate_id": "M2_xgb_d6_lr05_n300",
+      "model_id": "M2"
+    },
+    {
+      "axis": 4,
+      "candidate_id": "M7_ebm_noint_lr01_b256",
+      "model_id": "M7"
+    },
+    {
+      "axis": 3,
+      "candidate_id": "M6_rf_n200_depth16",
+      "model_id": "M6"
+    }
+  ],
+  "slug": "fannie_mae_2018"
+}

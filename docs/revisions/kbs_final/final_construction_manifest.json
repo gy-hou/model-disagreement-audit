@@ -1,0 +1,44 @@
+{
+  "generated_at_utc": "2026-10-23T02:56:11.228712+00:00",
+  "script_sha256": "c6f3b862298c44a5f5f3860ed67dc96b60846d4ff0e3710d164324530ad3e348",
+  "scientific_rerun": false,
+  "source_sha256": {
+    "results/tables/v1_10_mechanism/run_manifest.json": "17836239fdbba9e9cdf7cfc9fc2223f445ff308582373022aebb030592a53ae6",
+    "results/tables/v1_10_mechanism/population_comparisons.csv": "ba074671309a28f400742656aedd31b6cf5801c7ce0506ca0f0737f7f6749dfd",
+    "results/tables/v1_10_mechanism/validation_repetitions.csv": "c422cee265e36f703ef563060a4d3c98d7536615ec477dd3491ce8b37dcd698a",
+    "results/tables/v1_10_mechanism/comparison_summary.csv": "ac69f2830791be9d8e60968c23134abed2ac9fbcb81533ad51e1f444e34b31ff",
+    "results/tables/v1_10_mechanism/comparison_repetitions.csv": "2c67359127e5f03f6c41d3d7879001539434d6e47f1bfd4ebc8cfb9f906fe234",
+    "results/tables/v1_10_mechanism/candidate_population_metrics.csv": "fc89eeecc3656d4e0e3917ed76422d5e6610fa6a1b6f8a5205754d40dc5b903b",
+    "results/tables/v1_10_mechanism/solver_recoveries.csv": "4df67e62528126d4edc771125f368b768b153dea0fd99411f6afdf2fd1779c98",
+    "results/tables/v1_10_mechanism/validation_summary.csv": "fe0859ca832b1600e370b0d1e2b3b6b4b9ba3e1a2a171157aff6eead7112023e",
+    "results/tables/v1_10_mechanism/population_atoms.csv": "6719b3e0204567451af618fb9dd91ba02e82335103a016ffb9f8443432e14cd4",
+    "results/tables/v1_10_mechanism/queue_repetitions.csv": "ee310ccfe222d7e0fda016cf051ada2b3dc99f643e60422b2dbcf91e0ed5e210",
+    "src/mechanism_v1_10.py": "f9ee23fa39f4703f75cbb6bdbfc23c96fc603d926dc637e81db3647191239baa",
+    "idea-update/scripts/09_postgate_refit_sim.py": "c87108ed330be5ac1ce13ca363cc73a56fcbb7aa9690c4a85dcc1d8fb416d0b2",
+    "idea-update/results/09_postgate_refit_sim.csv": "e95210c97109e99a6bb5f6a380c1e7359f8b7cf305b6ac78a3c6395314c0e8ac",
+    "results/tables/v1_9_mechanism/mechanism_primary_summary.csv": "bf053b67e3b8073ecc7ed8be15ff647a4cc1e7bbaac36d01c7306ac8bccbb240",
+    "results/tables/v1_9_mechanism/candidate_population_metrics.csv": "80b0cbdf9e35cd8707eb95fc0bf2fdf161530c96018bca0bebb020e7368fa00a"
+  },
+  "outputs": {
+    "paper/kbs_final/figures/final_mechanisms.pdf": "21355b1205610abc4c6724a2b3681e323ed814bf149d39f0b7d1c6ff745d2242",
+    "paper/kbs_final/figures/final_mechanisms.svg": "d1348b3554544ca4a07d3dd84c5cd0b196b896de76108a926c3665eb1d4fd6f0",
+    "paper/kbs_final/figures/final_mechanisms.png": "3588783e180a05ee4e0c4e9dacf6305fb8feae4c6fad114cf2942a6ffde425e4",
+    "docs/revisions/kbs_final/final_refit_summary.csv": "d36465ea9c84d750fec3d7c22cbd0504c1e73d988f46a2b71725afd66851f982"
+  },
+  "checks": {
+    "old_production_hashes_unchanged": true,
+    "source_hashes_unchanged": true,
+    "exact_population_auc_recomputed": true,
+    "eligibility_and_budget_values_verified": true,
+    "complete_refit_groups_verified": true,
+    "realization_identity_verified": true,
+    "redundant_retained_sets_zero_gain": true,
+    "all_text_inside_canvas": true
+  },
+  "dimensions_inches": [
+    6.3,
+    7.2
+  ],
+  "minimum_font_pt": 9,
+  "png_dpi": 300
+}

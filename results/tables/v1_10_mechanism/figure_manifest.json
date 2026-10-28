@@ -1,0 +1,16 @@
+{
+  "generated_at_utc": "2026-10-19T08:37:06.841714+00:00",
+  "source_sha256": "f9ee23fa39f4703f75cbb6bdbfc23c96fc603d926dc637e81db3647191239baa",
+  "run_manifest_sha256": "17836239fdbba9e9cdf7cfc9fc2223f445ff308582373022aebb030592a53ae6",
+  "dimensions_inches": [
+    6.3,
+    7.2
+  ],
+  "minimum_font_pt": 9,
+  "png_dpi": 300,
+  "figures": {
+    "paper/v1_10/figures/mechanisms_v1_10.pdf": "ee716179da8e1d36499a947b985a446d901e59a212a1509575f80da5bbaa9258",
+    "paper/v1_10/figures/mechanisms_v1_10.svg": "05b41b3a1b94db85f6ba4d5d4ddaa3d211f42299a2abaa66190d1dbe886b8b31",
+    "paper/v1_10/figures/mechanisms_v1_10.png": "cbdbb6ace923736b223b741529a0276158565bd21c2a33e3583c94090e6e2704"
+  }
+}

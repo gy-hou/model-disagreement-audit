@@ -1,0 +1,3 @@
+contrast,metric,difference,lower,upper,interpretation,cohort,base,variant,learner,scope,M,development
+G2-G1,log_loss,-0.0006968757884237812,-0.0009104429240776341,-0.0004887286810517672,negative favors added information model,fannie_mae_2023,fannie_mae_2018,family,additive,exploratory_retrospective,20,historical_2018_test
+G1-G0,log_loss,-0.0035698418337519328,-0.004102280869176206,-0.0030107605115432825,negative favors added information model,fannie_mae_2023,fannie_mae_2018,family,additive,exploratory_retrospective,20,historical_2018_test

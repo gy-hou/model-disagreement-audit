@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "completed_at_utc": "2026-10-19T08:23:09.964064+00:00",
+  "protocol_sha256": "79e98e184c4bc4ce40e35858e88fd7434ebd0039342f8cc95071a5ba77a0a92e",
+  "execution_source_sha256": "63b483beeda1a21931160e35723843e3a306136109c4534214c35855a8730d28",
+  "source_amendment_sha256": "6b0349c2e56350c1b979ed9a21679887dc5445f2818000c9f20361558f0ccf1f",
+  "repeats": 300,
+  "training_sizes": [
+    8000,
+    80000
+  ],
+  "queue_rows": 57600,
+  "comparison_rows": 28800,
+  "solver_recovery_count": 3,
+  "environment": {
+    "python": "3.14.3",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2"
+  },
+  "outputs": {
+    "population_comparisons.csv": "ba074671309a28f400742656aedd31b6cf5801c7ce0506ca0f0737f7f6749dfd",
+    "validation_repetitions.csv": "c422cee265e36f703ef563060a4d3c98d7536615ec477dd3491ce8b37dcd698a",
+    "comparison_summary.csv": "ac69f2830791be9d8e60968c23134abed2ac9fbcb81533ad51e1f444e34b31ff",
+    "comparison_repetitions.csv": "2c67359127e5f03f6c41d3d7879001539434d6e47f1bfd4ebc8cfb9f906fe234",
+    "candidate_population_metrics.csv": "fc89eeecc3656d4e0e3917ed76422d5e6610fa6a1b6f8a5205754d40dc5b903b",
+    "solver_recoveries.csv": "4df67e62528126d4edc771125f368b768b153dea0fd99411f6afdf2fd1779c98",
+    "validation_summary.csv": "fe0859ca832b1600e370b0d1e2b3b6b4b9ba3e1a2a171157aff6eead7112023e",
+    "population_atoms.csv": "6719b3e0204567451af618fb9dd91ba02e82335103a016ffb9f8443432e14cd4",
+    "queue_repetitions.csv": "ee310ccfe222d7e0fda016cf051ada2b3dc99f643e60422b2dbcf91e0ed5e210"
+  }
+}

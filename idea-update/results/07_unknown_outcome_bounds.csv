@@ -1,0 +1,10 @@
+year,contrast,target,exchanged,legacy_dH,known_d,u_plus,u_minus,bound_lo,bound_hi,legacy_ceiling,materiality,cannot_create_meaningful_gain,cannot_create_meaningful_loss,strict_unknown_in_cohort
+2021,G2-G1,AllErr,125,1,1,17,19,-18,18,101,10.100000000000001,False,False,1201
+2021,G2-G1,FN,130,2,2,13,14,-12,15,91,9.1,False,False,1165
+2021,G2-AboveTauLow,AllErr,155,2,2,18,24,-22,20,102,10.200000000000001,False,False,1201
+2022,G2-G1,AllErr,171,7,6,22,22,-16,28,31,5.0,False,False,1238
+2022,G2-G1,FN,184,-7,-7,23,19,-26,16,58,5.800000000000001,False,False,667
+2022,G2-AboveTauLow,AllErr,266,6,21,28,43,-22,49,30,5.0,False,False,1238
+2023,G2-G1,AllErr,144,-1,10,15,26,-16,25,2,5.0,False,False,1101
+2023,G2-G1,FN,142,0,0,31,27,-27,31,8,5.0,False,False,425
+2023,G2-AboveTauLow,AllErr,226,1,-4,39,34,-38,35,4,5.0,False,False,1101

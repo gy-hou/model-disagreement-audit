@@ -1,0 +1,7 @@
+{
+  "at_utc": "2026-10-19T06:05:44.635040+00:00",
+  "reason": "Independent code review: require explicit candidate identities/provenance on blocked future independent entry; strict endpoint/eligible population must be sensitivity, not original primary family; clarify EM common candidate-mask conditioning.",
+  "historical_numeric_changes": false,
+  "strict_evaluation_started": false,
+  "historical_execution_plan_sha256": "30d80bc7098dba731268ca506275bc8a9292b0f70b338ecbef0e884936b724dd"
+}

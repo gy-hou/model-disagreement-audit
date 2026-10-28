@@ -1,0 +1,27 @@
+{
+  "completed_at_utc": "2026-10-19T06:05:48.756125+00:00",
+  "cohort": "freddie_mac_2021",
+  "scope": "exploratory_strict_endpoint_eligible",
+  "dataset_sha256": "c7a6d6f91c8a1360583a61587f8c549a3d560e0ac8ad399833bab4ae40a32f24",
+  "plan_sha256": "67a5b33dfed93142a52e0263daf2bdc6a72d60084ea9441e6aa51537a027f3d6",
+  "development_manifest_sha256": "d02b5e64818aad4d1a3ff026e4fcee154201827441a510670cec689c86624aaa",
+  "fixed_system_only": true,
+  "borrower_cluster_ids_available": false,
+  "bootstrap": 999,
+  "endpoint_metadata": {
+    "endpoint": "strict_calendar_age0_24_60plus_or_reo",
+    "eligible": "strict_known",
+    "original_N": 10000,
+    "strict_N": 8799,
+    "original_cache_sha256": "a64064329220477da6c136d53004da6e749cc5e54465fdf6fcc0edcabea1a2b7",
+    "interpretation": "exploratory endpoint-plus-eligibility sensitivity, not a causal label correction or independent validation"
+  },
+  "bootstrap_scope": "paired row occurrences; conditional on fixed models, candidate/policy selection, bins",
+  "results": {
+    "performance.csv": "9fbf28e1b50ac0fd8c8be22d0422e3334f965e7d78087e01170fa69c25381dd6",
+    "predictive.csv": "6233e014d84ef2e94d48af27848ccaa7d71ed7f2888e80924461f9ed1646b194",
+    "budget_boundary.csv": "24736336472c8a2ec51d79a0d77befc84e9100e37b552064f1fb6f1fad051db6",
+    "decomposition.csv": "2e33f5f2061fbc997febd5023d2910a433f91b80a268b7cfd0bff14b78e3d906",
+    "paired_contrasts.csv": "4ab90c59f924a2bbca91980a971fd4bf8a210ed557557f7090ec364934471a0f"
+  }
+}

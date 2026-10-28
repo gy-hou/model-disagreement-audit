@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "at_utc": "2026-10-19T06:37:05.018685+00:00",
+  "protocol_sha256": "710f1345a3d960e0a286f9089d7da38e5015a0273be087c34e9bc19e241eb91c",
+  "source_amendment_sha256": "1dc519ed8a45d55e4db306a260ef2d935abeb366a3fcee7a641882a8eedf188b",
+  "receipts": [
+    {
+      "base": "freddie_mac_2018",
+      "seed": 2026101901,
+      "status": "ok",
+      "M": 2,
+      "receipt_sha256": "834333b9cd0510b234c530139e21544ded5102e980b32fff8e04454a82117a5f",
+      "range_min": 1.5233719876436153e-07,
+      "range_max": 0.042815158785379864,
+      "finite_oof": true
+    },
+    {
+      "base": "freddie_mac_2018",
+      "seed": 2026101902,
+      "status": "ok",
+      "M": 3,
+      "receipt_sha256": "3b62d82c760789f9aba21a57bacafb882a89dd5cf3737ed73e7d50882af997c2",
+      "range_min": 1.94146921133221e-05,
+      "range_max": 0.21801815103468694,
+      "finite_oof": true
+    },
+    {
+      "base": "freddie_mac_2018",
+      "seed": 2026101903,
+      "status": "ok",
+      "M": 2,
+      "receipt_sha256": "8f69cfd2df7136ee9b76a9ddacb6fb1922bcf0aa9c0d10b45f4931f0df250b34",
+      "range_min": 3.1283064839959795e-07,
+      "range_max": 0.05986873666095564,
+      "finite_oof": true
+    },
+    {
+      "base": "fannie_mae_2018",
+      "seed": 2026101901,
+      "status": "ok",
+      "M": 8,
+      "receipt_sha256": "5fdec8a21a1c2b80232ec5f8711b430b874cd79bdb33907dd28d97350669b795",
+      "range_min": 0.0002567179035395384,
+      "range_max": 0.40662582523684515,
+      "finite_oof": true
+    },
+    {
+      "base": "fannie_mae_2018",
+      "seed": 2026101902,
+      "status": "ok",
+      "M": 10,
+      "receipt_sha256": "a8d64cdfc130e3b5057a68ac7ac96637fe19cf6cb836588ab81b4a633320cabb",
+      "range_min": 0.00023032290876983378,
+      "range_max": 0.40607631511549963,
+      "finite_oof": true
+    },
+    {
+      "base": "fannie_mae_2018",
+      "seed": 2026101903,
+      "status": "ok",
+      "M": 12,
+      "receipt_sha256": "cc0a904eda4c1faa234676c09d75dfd627bccb7cfe9acaa4ffd6ff0d6456fc88",
+      "range_min": 0.00038797732965235046,
+      "range_max": 0.44130468792371447,
+      "finite_oof": true
+    }
+  ]
+}

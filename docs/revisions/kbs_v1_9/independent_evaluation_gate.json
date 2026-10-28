@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "blocked",
+  "reason": "No proven independent evaluation cohort. User explicitly confirmed Freddie2019/2020 prior use; uncertainty concerns whether OTHER unused data exist.",
+  "outcomes_unseen_before_freeze": false,
+  "user_external_use_confirmed": true,
+  "user_reported_prior_exposure_or_uncertainty": true,
+  "loan_identity_disjoint": true,
+  "loan_identity_scope": "Raw Freddie loan IDs pairwise disjoint across local2018–2025 source vintages; historical2018/2021–2023 split IDs partition replay passed. Does not establish researcher nonexposure or borrower independence.",
+  "outcome_contract_validated": true,
+  "outcome_contract_scope": "Synthetic checks plus raw historical Freddie2018/2021–2023 replay; strict endpoint is differently named sensitivity; Fannie strict calendar replay pending.",
+  "label_time_audited": true,
+  "label_time_scope": "Historical Freddie snapshot observed reporting cutoff2025-09 and first-payment windows inspected; actual historical provider release time not retained. Retrospective2026 only.",
+  "prospective_calendar_validated": false,
+  "raw_source_sha256": {
+    "data/raw/freddie_mac_samples_2018_2025/sample_2018.zip": "03c877f55a3ab1d2f2a311a580dc8b0a0449c36de3aee00bfc275202c3a7bab8",
+    "data/raw/freddie_mac_samples_2018_2025/sample_2019.zip": "66bd8abbf119b773b717957a5dcfd1279fc035c2912abe144bb4c54442fdcfc1",
+    "data/raw/freddie_mac_samples_2018_2025/sample_2020.zip": "c26d42cd02817e1d446631883afd041b28c52767c070b69f02e1d738d8873dac",
+    "data/raw/freddie_mac_samples_2018_2025/sample_2021.zip": "1837f5e0b3ae6d6aa66625dc01cb91d9b9adc536f792a913a0a0ca3eaab673d4",
+    "data/raw/freddie_mac_samples_2018_2025/sample_2022.zip": "bfddb67bf1ca2cea2c569336b8e27a6f46a32dca3b53c2520c5d44d144a411bc",
+    "data/raw/freddie_mac_samples_2018_2025/sample_2023.zip": "089296000b237b756abbf35cdcf65ec1e68b596ee92cdae72881d119ca1b7db4"
+  },
+  "audit_document_sha256": "7bc4034b37c05e1771816143a97517542e4390898f6a97e1dfdb408bfbfd5217",
+  "outcome_contract_sha256": "8d012f0ce6c22904ed3312c57a3c070a1b4560057018b072a5f76f8e1bd0e80e",
+  "permitted_mode": "exploratory_retrospective",
+  "frozen_manifest_sha256": null,
+  "release_row_level_records": false,
+  "user_confirmed_prior_use": true
+}

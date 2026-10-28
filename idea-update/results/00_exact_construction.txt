@@ -1,0 +1,20 @@
+
+=== pi=1/2, d=1/10, eps=1/10, b=1/10 ===
+calibrated: P1 True  P2 True  S True
+AUC(p1) = 53/90 = 0.588889   Brier = 0.243333
+AUC(p2) = 53/90 = 0.588889   Brier = 0.243333
+AUC(S) = 53/90 = 0.588889   Brier = 0.241111
+oracle expected errors per 10,000 at b=1/10: S,C                        500 = 500.0
+oracle expected errors per 10,000 at b=1/10: S,C,D                      500 = 500.0
+oracle expected errors per 10,000 at b=1/10: symmetric (S, sorted P)    500 = 500.0
+oracle expected errors per 10,000 at b=1/10: ordered (S, P1, P2)        600 = 600.0
+
+=== pi=1/25, d=1/100, eps=1/100, b=1/10 ===
+calibrated: P1 True  P2 True  S True
+AUC(p1) = 241/432 = 0.557870   Brier = 0.038333
+AUC(p2) = 241/432 = 0.557870   Brier = 0.038333
+AUC(S) = 241/432 = 0.557870   Brier = 0.038311
+oracle expected errors per 10,000 at b=1/10: S,C                        960 = 960.0
+oracle expected errors per 10,000 at b=1/10: S,C,D                      960 = 960.0
+oracle expected errors per 10,000 at b=1/10: symmetric (S, sorted P)    960 = 960.0
+oracle expected errors per 10,000 at b=1/10: ordered (S, P1, P2)        970 = 970.0

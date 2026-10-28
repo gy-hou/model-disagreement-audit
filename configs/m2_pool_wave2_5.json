@@ -1,0 +1,82 @@
+{
+  "candidates": [
+    {
+      "name": "M2_xgb_default_v01",
+      "max_depth": 6,
+      "learning_rate": 0.3,
+      "n_estimators": 100,
+      "min_child_weight": 1,
+      "subsample": 1.0,
+      "colsample_bytree": 1.0,
+      "reg_lambda": 1.0,
+      "random_state": 20260504
+    },
+    {
+      "name": "M2_xgb_d4_lr05_n300",
+      "max_depth": 4,
+      "learning_rate": 0.05,
+      "n_estimators": 300,
+      "min_child_weight": 5,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "reg_lambda": 1.0,
+      "random_state": 20260504
+    },
+    {
+      "name": "M2_xgb_d6_lr05_n300",
+      "max_depth": 6,
+      "learning_rate": 0.05,
+      "n_estimators": 300,
+      "min_child_weight": 5,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "reg_lambda": 1.0,
+      "random_state": 20260504
+    },
+    {
+      "name": "M2_xgb_d4_lr1_n200",
+      "max_depth": 4,
+      "learning_rate": 0.1,
+      "n_estimators": 200,
+      "min_child_weight": 3,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "reg_lambda": 1.0,
+      "random_state": 20260504
+    },
+    {
+      "name": "M2_xgb_d6_lr1_n200",
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "n_estimators": 200,
+      "min_child_weight": 3,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "reg_lambda": 1.0,
+      "random_state": 20260504
+    },
+    {
+      "name": "M2_xgb_d8_lr05_n500",
+      "max_depth": 8,
+      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "min_child_weight": 5,
+      "subsample": 0.7,
+      "colsample_bytree": 0.7,
+      "reg_lambda": 2.0,
+      "random_state": 20260504
+    },
+    {
+      "name": "M2_xgb_d3_lr03_n400",
+      "max_depth": 3,
+      "learning_rate": 0.03,
+      "n_estimators": 400,
+      "min_child_weight": 10,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "reg_lambda": 0.5,
+      "random_state": 20260504
+    }
+  ],
+  "notes": "Wave 1 B2: expanded M2 XGBoost grid. The first candidate reproduces the v0.1 phase2 default under the project random state for provenance."
+}

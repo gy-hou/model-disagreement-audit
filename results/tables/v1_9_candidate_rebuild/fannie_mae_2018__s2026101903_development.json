@@ -1,0 +1,41 @@
+{
+  "base": "fannie_mae_2018",
+  "seed": 2026101903,
+  "status": "ok",
+  "M": 12,
+  "scope": "post_primary_exploratory_candidate_reconstruction",
+  "protocol_sha256": "710f1345a3d960e0a286f9089d7da38e5015a0273be087c34e9bc19e241eb91c",
+  "elapsed_seconds": 288.2933651250787,
+  "candidate_table_sha256": "04704dd536881e963264ff8abf78b4478cb953ed4885323c19e7826af9a86342",
+  "candidate_ids": [
+    "M1_lr_l2_raw",
+    "M1_lr_l2_engineered_C1",
+    "M1_lr_l2_engineered_C0p1",
+    "M1_lr_l1_engineered_C1",
+    "M1_lr_l1_engineered_C0p5",
+    "M1_lr_elasticnet_engineered",
+    "M2_xgb_d4_lr05_n300",
+    "M2_xgb_d6_lr05_n300",
+    "M2_xgb_d4_lr1_n200",
+    "M2_xgb_d3_lr03_n400",
+    "M7_ebm_noint_lr05_b128",
+    "M7_ebm_noint_lr05_b256"
+  ],
+  "artifact_paths": [
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101903/M1_lr_l2_raw.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101903/M1_lr_l2_engineered_C1.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101903/M1_lr_l2_engineered_C0p1.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101903/M1_lr_l1_engineered_C1.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101903/M1_lr_l1_engineered_C0p5.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101903/M1_lr_elasticnet_engineered.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101903/M2_xgb_d4_lr05_n300.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101903/M2_xgb_d6_lr05_n300.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101903/M2_xgb_d4_lr1_n200.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101903/M2_xgb_d3_lr03_n400.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101903/M7_ebm_noint_lr05_b128.joblib",
+    "models/v1_9_candidate_rebuild/fannie_mae_2018__s2026101903/M7_ebm_noint_lr05_b256.joblib"
+  ],
+  "audit_models_sha256": "504d3f77dea82e820f4b350304dc27db29bc932cf08f594ff450d3abc480a1a2",
+  "development_predictions_sha256": "1f833922ddcf96e878ec4acba4e2a6ecec57b1da3dbfa7c040f421b4ad20a8d8",
+  "completed_at_utc": "2026-10-19T06:34:53.293282+00:00"
+}

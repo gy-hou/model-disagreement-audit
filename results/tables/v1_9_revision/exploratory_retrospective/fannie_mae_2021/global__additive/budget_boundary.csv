@@ -1,0 +1,7 @@
+target,budget,entering_n,leaving_n,entering_hits,leaving_hits,queue_jaccard,cohort,base,variant,learner,scope,M,development
+AllErr,0.05,8,8,8,8,0.968503937007874,fannie_mae_2021,fannie_mae_2018,global,additive,exploratory_retrospective,9,historical_2018_test
+AllErr,0.1,43,43,4,3,0.9175455417066155,fannie_mae_2021,fannie_mae_2018,global,additive,exploratory_retrospective,9,historical_2018_test
+AllErr,0.2,90,90,2,1,0.9138755980861244,fannie_mae_2021,fannie_mae_2018,global,additive,exploratory_retrospective,9,historical_2018_test
+FN,0.05,68,68,2,1,0.7605633802816901,fannie_mae_2021,fannie_mae_2018,global,additive,exploratory_retrospective,9,historical_2018_test
+FN,0.1,83,83,2,5,0.8467220683287165,fannie_mae_2021,fannie_mae_2018,global,additive,exploratory_retrospective,9,historical_2018_test
+FN,0.2,104,104,0,1,0.9011406844106464,fannie_mae_2021,fannie_mae_2018,global,additive,exploratory_retrospective,9,historical_2018_test

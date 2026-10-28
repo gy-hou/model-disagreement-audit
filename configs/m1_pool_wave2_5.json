@@ -1,0 +1,60 @@
+{
+  "candidates": [
+    {
+      "name": "M1_lr_l2_raw",
+      "feature_engineering": false,
+      "C": 1.0,
+      "penalty": "l2",
+      "solver": "lbfgs",
+      "max_iter": 5000,
+      "random_state": 20260504
+    },
+    {
+      "name": "M1_lr_l2_engineered_C1",
+      "feature_engineering": true,
+      "C": 1.0,
+      "penalty": "l2",
+      "solver": "lbfgs",
+      "max_iter": 5000,
+      "random_state": 20260504
+    },
+    {
+      "name": "M1_lr_l2_engineered_C0p1",
+      "feature_engineering": true,
+      "C": 0.1,
+      "penalty": "l2",
+      "solver": "lbfgs",
+      "max_iter": 5000,
+      "random_state": 20260504
+    },
+    {
+      "name": "M1_lr_l1_engineered_C1",
+      "feature_engineering": true,
+      "C": 1.0,
+      "penalty": "l1",
+      "solver": "liblinear",
+      "max_iter": 5000,
+      "random_state": 20260504
+    },
+    {
+      "name": "M1_lr_l1_engineered_C0p5",
+      "feature_engineering": true,
+      "C": 0.5,
+      "penalty": "l1",
+      "solver": "liblinear",
+      "max_iter": 5000,
+      "random_state": 20260504
+    },
+    {
+      "name": "M1_lr_elasticnet_engineered",
+      "feature_engineering": true,
+      "C": 1.0,
+      "penalty": "elasticnet",
+      "solver": "saga",
+      "l1_ratio": 0.5,
+      "max_iter": 5000,
+      "random_state": 20260504
+    }
+  ],
+  "notes": "Wave 2.5 FICO primary: raw M1 retained for provenance; engineered candidates use FICO-specific ratio, burden, recency, log1p, and train-only polynomial features in src/m1_feature_engineering.py while remaining sklearn LogisticRegression models."
+}

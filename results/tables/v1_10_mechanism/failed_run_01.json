@@ -1,0 +1,9 @@
+{
+  "status": "failed_before_MC_outputs",
+  "time_utc": "2026-10-19T08:20:55.340377+00:00",
+  "seed": 261020109,
+  "error": "RuntimeError: Logistic fit failed for E_qualified: ABNORMAL: ",
+  "source_sha256": "3d50f8c8e498a5f541c36426266f4f9f8e478ae0a829961d21f26771aee7e0dd",
+  "protocol_sha256": "79e98e184c4bc4ce40e35858e88fd7434ebd0039342f8cc95071a5ba77a0a92e",
+  "completed_MC_result_files": false
+}

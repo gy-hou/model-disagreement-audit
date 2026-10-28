@@ -1,0 +1,55 @@
+{
+  "design": "retrospective endpoint-definition and follow-up audit; no independent D_eval",
+  "strict_target": "strict_calendar_age0_24_60plus_or_reo",
+  "script_sha256": "093f45b1bcabc0b9f6a41783b2f1817e38bff72bfb4ee533b056812c89d7da8b",
+  "cohorts": [
+    {
+      "cohort": "freddie_mac_2018",
+      "source_sha256": "03c877f55a3ab1d2f2a311a580dc8b0a0449c36de3aee00bfc275202c3a7bab8",
+      "source_relative_path": "data/raw/freddie_mac_samples_2018_2025/sample_2018.zip",
+      "observed_max_reporting_month": "2025-09",
+      "first_payment_min": "2018-02",
+      "first_payment_max": "2021-06",
+      "latest_calendar_window_end": "2023-05",
+      "historical_split_ids_disjoint": true,
+      "all_historical_split_labels_replayed": true,
+      "independent_evaluation_eligible": false
+    },
+    {
+      "cohort": "freddie_mac_2021",
+      "source_sha256": "1837f5e0b3ae6d6aa66625dc01cb91d9b9adc536f792a913a0a0ca3eaab673d4",
+      "source_relative_path": "data/raw/freddie_mac_samples_2018_2025/sample_2021.zip",
+      "observed_max_reporting_month": "2025-09",
+      "first_payment_min": "2021-02",
+      "first_payment_max": "2023-02",
+      "latest_calendar_window_end": "2025-01",
+      "historical_split_ids_disjoint": true,
+      "all_historical_split_labels_replayed": true,
+      "independent_evaluation_eligible": false
+    },
+    {
+      "cohort": "freddie_mac_2022",
+      "source_sha256": "bfddb67bf1ca2cea2c569336b8e27a6f46a32dca3b53c2520c5d44d144a411bc",
+      "source_relative_path": "data/raw/freddie_mac_samples_2018_2025/sample_2022.zip",
+      "observed_max_reporting_month": "2025-09",
+      "first_payment_min": "2022-02",
+      "first_payment_max": "2024-05",
+      "latest_calendar_window_end": "2026-04",
+      "historical_split_ids_disjoint": true,
+      "all_historical_split_labels_replayed": true,
+      "independent_evaluation_eligible": false
+    },
+    {
+      "cohort": "freddie_mac_2023",
+      "source_sha256": "089296000b237b756abbf35cdcf65ec1e68b596ee92cdae72881d119ca1b7db4",
+      "source_relative_path": "data/raw/freddie_mac_samples_2018_2025/sample_2023.zip",
+      "observed_max_reporting_month": "2025-09",
+      "first_payment_min": "2023-02",
+      "first_payment_max": "2025-05",
+      "latest_calendar_window_end": "2027-04",
+      "historical_split_ids_disjoint": true,
+      "all_historical_split_labels_replayed": true,
+      "independent_evaluation_eligible": false
+    }
+  ]
+}

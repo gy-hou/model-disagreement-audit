@@ -1,0 +1,23 @@
+{
+  "base": "freddie_mac_2018",
+  "seed": 2026101902,
+  "status": "ok",
+  "M": 3,
+  "scope": "post_primary_exploratory_candidate_reconstruction",
+  "protocol_sha256": "710f1345a3d960e0a286f9089d7da38e5015a0273be087c34e9bc19e241eb91c",
+  "elapsed_seconds": 186.13170929206535,
+  "candidate_table_sha256": "53cf195a71466a02b14060e1071c27ddff1e00c8178adca0061395d90687abe4",
+  "candidate_ids": [
+    "M2_xgb_d3_lr03_n400",
+    "M7_ebm_noint_lr05_b128",
+    "M7_ebm_noint_lr05_b256"
+  ],
+  "artifact_paths": [
+    "models/v1_9_candidate_rebuild/freddie_mac_2018__s2026101902/M2_xgb_d3_lr03_n400.joblib",
+    "models/v1_9_candidate_rebuild/freddie_mac_2018__s2026101902/M7_ebm_noint_lr05_b128.joblib",
+    "models/v1_9_candidate_rebuild/freddie_mac_2018__s2026101902/M7_ebm_noint_lr05_b256.joblib"
+  ],
+  "audit_models_sha256": "430a2722cdcdf2d14dc34bfa828148624a4848434db0e7bf88bc3cf7681035d2",
+  "development_predictions_sha256": "e6e1952bcbaedf0cba52cb60cbc8620b3d397f764c3e21617d542263ccf97f1b",
+  "completed_at_utc": "2026-10-19T06:26:24.340592+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "completed_at_utc": "2026-10-19T06:02:49.497494+00:00",
+  "cohort": "fannie_mae_2021",
+  "scope": "exploratory_retrospective",
+  "dataset_sha256": "4ce0ba93eac99edfba0b299dda159ae70f600a13d81726e4d41f73a64df359fa",
+  "plan_sha256": "30d80bc7098dba731268ca506275bc8a9292b0f70b338ecbef0e884936b724dd",
+  "development_manifest_sha256": "76d2a6a2d4ebf04187fda0ce97431db51f9a6f3e9585fa44e57f523e2075a117",
+  "fixed_system_only": true,
+  "borrower_cluster_ids_available": false,
+  "bootstrap": 1999,
+  "endpoint_metadata": {
+    "endpoint": "historical recorded loan-age-based endpoint"
+  },
+  "bootstrap_scope": "paired row occurrences; conditional on fixed models, candidate/policy selection, bins",
+  "results": {
+    "performance.csv": "cf1285fd583bb848b4c1dc29b86fffd82bb83a609b8f8cf7e8600d4bd81fb265",
+    "predictive.csv": "086bd05cd81a97101b464d9fb8cd5c6d730702ac7d516906c0b8988b7b6d8edb",
+    "budget_boundary.csv": "ddeeabfd0e8ddb437e995cb45862f935dadad8f15fabf4a5eb2a56034aa49107",
+    "decomposition.csv": "47eefa20dddbc7b35193aa9361d07b752a04c04eef3d71872df77578e8f80a78",
+    "paired_contrasts.csv": "2ee247aacd46c7ff3606f6cbf599874cd0dd80e67156f206859c6181648bcee2"
+  }
+}

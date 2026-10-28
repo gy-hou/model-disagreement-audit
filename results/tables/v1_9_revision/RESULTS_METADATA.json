@@ -1,0 +1,9 @@
+{
+  "historical_execution_plan": "implementation_amendment_02/analysis_plan.json",
+  "historical_execution_source": "implementation_amendment_02/audit_revision_v1_9.py",
+  "current_guard_and_strict_plan": "analysis_plan.json",
+  "EM_information_condition": "Diagnostic only: G0 and P_score target conversion share known candidate-flip mask; pure score-only/incremental-information interpretation applies only to AllErr/FN/FP/Pos.",
+  "main_numeric_outputs_unchanged": true,
+  "independent_validation_completed": false,
+  "tests_passed": 11
+}

@@ -1,0 +1,5 @@
+base,target,base_policy,full_policy,base_oof_hits,full_oof_hits,target_n,same_choice
+freddie_mac_2018,AllErr,AboveTauLow,G2,962,963,3290,False
+freddie_mac_2018,FN,BelowTauTop,BelowTauTop,30,30,111,True
+fannie_mae_2018,AllErr,G0,G0,962,962,3009,True
+fannie_mae_2018,FN,BelowTauTop,BelowTauTop,44,44,112,True

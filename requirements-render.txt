@@ -1,0 +1,3 @@
+# Additional Python dependency for the recorded figure builders.
+# System requirements: Arial (normal/bold/italic) and Poppler pdffonts.
+Pillow==12.2.0

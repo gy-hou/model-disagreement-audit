@@ -1,0 +1,7 @@
+{
+  "at_utc": "2026-10-19T06:00:07.959878+00:00",
+  "reason": "Before evaluation, increase primary bootstrap draws from 1999 to 9999 for 24-comparison Bonferroni tail resolution; no evaluation results inspected or generated",
+  "initial_plan_sha256": "56b18bce46079ba81b6a9f972cd0f9a05551509c998e8d7b663e9df1cefcf723",
+  "model_or_policy_changes": false,
+  "audit_clarification": "User confirmed prior Freddie2019/2020 use; audit corrected wording before any new evaluation."
+}

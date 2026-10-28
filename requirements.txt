@@ -1,0 +1,12 @@
+# Versions used for the validated local revision. Python 3.14.3.
+numpy==2.4.4
+pandas==3.0.2
+scipy==1.17.1
+scikit-learn==1.8.0
+joblib==1.5.3
+threadpoolctl==3.6.0
+matplotlib==3.10.9
+pytest==9.0.3
+pyarrow==24.0.0
+interpret==0.7.8
+xgboost==3.2.0

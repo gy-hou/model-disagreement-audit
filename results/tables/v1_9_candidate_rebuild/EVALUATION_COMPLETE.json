@@ -1,0 +1,213 @@
+{
+  "completed_at_utc": "2026-10-19T06:38:59.691366+00:00",
+  "protocol_sha256": "710f1345a3d960e0a286f9089d7da38e5015a0273be087c34e9bc19e241eb91c",
+  "execution_source_sha256": "d0fb18df42adb24a8d0c284b594983bf131deebc6085a2ab8b0367e1b110e175",
+  "source_amendment_sha256": "1dc519ed8a45d55e4db306a260ef2d935abeb366a3fcee7a641882a8eedf188b",
+  "endpoint": "historical stored provider loan_age 0..24; numeric delinquency >=2 or RA event; no strict-calendar substitution",
+  "development_sha256": "b4c9e68a8f8a2586442c130e52264b2fd2daadd5d40cf63f667cc9f4663b868b",
+  "evaluated": [
+    {
+      "base": "freddie_mac_2018",
+      "cohort": "freddie_mac_2021",
+      "seed": 2026101901,
+      "M": 2,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 10000
+    },
+    {
+      "base": "freddie_mac_2018",
+      "cohort": "freddie_mac_2022",
+      "seed": 2026101901,
+      "M": 2,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 10000
+    },
+    {
+      "base": "freddie_mac_2018",
+      "cohort": "freddie_mac_2023",
+      "seed": 2026101901,
+      "M": 2,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 6741
+    },
+    {
+      "base": "freddie_mac_2018",
+      "cohort": "freddie_mac_2021",
+      "seed": 2026101902,
+      "M": 3,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 10000
+    },
+    {
+      "base": "freddie_mac_2018",
+      "cohort": "freddie_mac_2022",
+      "seed": 2026101902,
+      "M": 3,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 10000
+    },
+    {
+      "base": "freddie_mac_2018",
+      "cohort": "freddie_mac_2023",
+      "seed": 2026101902,
+      "M": 3,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 6741
+    },
+    {
+      "base": "freddie_mac_2018",
+      "cohort": "freddie_mac_2021",
+      "seed": 2026101903,
+      "M": 2,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 10000
+    },
+    {
+      "base": "freddie_mac_2018",
+      "cohort": "freddie_mac_2022",
+      "seed": 2026101903,
+      "M": 2,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 10000
+    },
+    {
+      "base": "freddie_mac_2018",
+      "cohort": "freddie_mac_2023",
+      "seed": 2026101903,
+      "M": 2,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 6741
+    },
+    {
+      "base": "fannie_mae_2018",
+      "cohort": "fannie_mae_2021",
+      "seed": 2026101901,
+      "M": 8,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 10000
+    },
+    {
+      "base": "fannie_mae_2018",
+      "cohort": "fannie_mae_2022",
+      "seed": 2026101901,
+      "M": 8,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 10000
+    },
+    {
+      "base": "fannie_mae_2018",
+      "cohort": "fannie_mae_2023",
+      "seed": 2026101901,
+      "M": 8,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 10000
+    },
+    {
+      "base": "fannie_mae_2018",
+      "cohort": "fannie_mae_2021",
+      "seed": 2026101902,
+      "M": 10,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 10000
+    },
+    {
+      "base": "fannie_mae_2018",
+      "cohort": "fannie_mae_2022",
+      "seed": 2026101902,
+      "M": 10,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 10000
+    },
+    {
+      "base": "fannie_mae_2018",
+      "cohort": "fannie_mae_2023",
+      "seed": 2026101902,
+      "M": 10,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 10000
+    },
+    {
+      "base": "fannie_mae_2018",
+      "cohort": "fannie_mae_2021",
+      "seed": 2026101903,
+      "M": 12,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 10000
+    },
+    {
+      "base": "fannie_mae_2018",
+      "cohort": "fannie_mae_2022",
+      "seed": 2026101903,
+      "M": 12,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 10000
+    },
+    {
+      "base": "fannie_mae_2018",
+      "cohort": "fannie_mae_2023",
+      "seed": 2026101903,
+      "M": 12,
+      "scope": "post_primary_exploratory_candidate_reconstruction",
+      "N": 10000
+    }
+  ],
+  "skipped": [],
+  "public_results": {
+    "freddie_mac_2018__s2026101903_development.csv": "85bf72f395fc1d01efbf6f15ac3ebc301210c13ba080d19d59204d4fbe09f202",
+    "fannie_mae_2018__s2026101902_development.csv": "b3bc5b759ee285910ff6dd0b4732530c302477d532af204f97105b2276b7b06a",
+    "predictive.csv": "d8105ba05f51e18aa18f09e9fe25be869e6c98486489b3e6993c8fc0801e632e",
+    "fannie_mae_2018__s2026101903_development.csv": "cb430ff729f1a0785e9a2796101627cc0fb4063c2f78cc4e2660a87bf87a0aeb",
+    "freddie_mac_2018__s2026101902_development.csv": "65b93a76aa7767329f3797d0bdc38e0af86868baefe0457d57c418ae5a42b24c",
+    "fannie_mae_2018__s2026101903_candidates.csv": "04704dd536881e963264ff8abf78b4478cb953ed4885323c19e7826af9a86342",
+    "freddie_mac_2018__s2026101901_candidates.csv": "b1dbb2254dddb75a40342aa8bb240cd7ba9d02086e0033696793d0f58bb6ec6c",
+    "fannie_mae_2018__s2026101901_development.csv": "c5679b9cf45a6039835a9ba2960e237720d6995e0a7258824208eb294e2f5dee",
+    "range_stability.csv": "9d4abee9c74149291c94a63a9d0d83b6a3fbe64287138150ccb5fe5e1b873ade",
+    "selection_frequency.csv": "b4de339c52a1f7187489d31f34c3328376e45cab0e8a0aaba76ca49664b963df",
+    "comparisons.csv": "b912eb4761aa47d5f32c90f8ca93a5c07613592bd6612b6c3d6f2d4e4dfa7646",
+    "fannie_mae_2018__s2026101902_candidates.csv": "ba05f1ed8428305392d8e858cb52023d4221967e065f61f9673e91f773b9803c",
+    "freddie_mac_2018__s2026101901_development.csv": "174d9738759f533a87c472bff93b9b5ed6c7501e1dd443c735879a9f6f3a1a88",
+    "freddie_mac_2018__s2026101902_candidates.csv": "53cf195a71466a02b14060e1071c27ddff1e00c8178adca0061395d90687abe4",
+    "freddie_mac_2018__s2026101903_candidates.csv": "4c8019f05f0c55c64cf8fa2647052c8d425a5793a9dad3996355991fd78bf7e7",
+    "fannie_mae_2018__s2026101901_candidates.csv": "91f203e7c50c2b76f22804fee8d3fc5a818abd7f7a2c4b663c2159e9dfdeb8d6"
+  },
+  "private_results": {
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2021_selection_frequency.npz": "2c57524aa29abf704510c821ea4909431ffe23470ce0a4360daa3e1cb65e133c",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2021_selection_frequency.npz": "53c23222976a09d5f57a5eb13340763c38c24af2f50ebff2833f7125badbb4b9",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2022_selection_frequency.npz": "0a0b875c150c8d3a7a797c73b54b1a738f928bea3f0bbe3bf163ec3c5b0eb1a7",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018_selection_frequency.npz": "f5d419b7880855e3b0125abdbdb5eb7ecc8aed67fafa2b779b645c8e2d79aba4",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018_selection_frequency.npz": "45fa2b8f42be42478dfa19ff8996d9d31102c4932691a6835cc33be68d87ae3f",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2022_selection_frequency.npz": "bc4eaa74cb709a34aa4742ff739f1335738db8b9283c1864a73d7b2de6d268db",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2023_selection_frequency.npz": "f1cc7e5e1599694b97060797afbe967d4f0a58f3af8275860b53e9a1c7a596a2",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2023_selection_frequency.npz": "eb4fe5184f56faf5374ba738b1ab3f18168e51538004856e213fd55618ea629e",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101901/freddie_mac_2022_evaluation.npz": "82572c6a94af65957b91d1026ea218a54cc76b876386941bfdb5bc1bbd242257",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101901/freddie_mac_2023_evaluation.npz": "3051c3e8bec9836e4a0e620859abda02d7837c059fd49dd26c868fcd3ec05131",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101901/freddie_mac_2021_evaluation.npz": "b8215bc05b9cc3fe2ec42726223d30795fcde942835cea9e6ac56647c30852f4",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101901/freddie_mac_2018_evaluation.npz": "e55fcbcc2b67ca1f4992a44db4d3bf0853a53c842504dce6305179a848022e95",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101901/development_predictions.npz": "41e2aea5da88a080373c999294251b8b1fdc54f70aa73db77aa6ba9bbfebc308",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101901/fannie_mae_2023_evaluation.npz": "04691c3810b5d8018d6c2ff5af339781ae0af96aaf74394e2cb002f9f42eb220",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101901/fannie_mae_2022_evaluation.npz": "e5e6841ab21c753bc190cb484baa2ad9196bdc06c9458a6c761af7fc934ce13c",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101901/fannie_mae_2021_evaluation.npz": "8f87f266dd00e67ec03cba66190b9ff78eb13d3aa580b1f9f362d9f0a3d3ab46",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101901/development_predictions.npz": "750220e4607922472fdc89f11bdd5ad71d292b10cfdfb64944e47274940c3d84",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101901/fannie_mae_2018_evaluation.npz": "ad7558b7a94f2c277cbf8e0a84f7ad98f5d0bacefb0b54c6d7f8e17efcb08f71",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101902/freddie_mac_2022_evaluation.npz": "6a2f80d1f362104354e9f7544a34a969598c60657e7a4edfbe57085975937f64",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101902/freddie_mac_2023_evaluation.npz": "cecd4ee2e0572e46d20f00b7095ff1fdc82eea71387db76ea4db00be00b11684",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101902/freddie_mac_2021_evaluation.npz": "2a9eee142b2828ff1cf6e4cf43416e54aa63aa2c74da8e65aa895428d46f1ba3",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101902/freddie_mac_2018_evaluation.npz": "24c9b5cc41ef554517c5c576e340febc07a2bbf32f62e200381dfc9d105f8642",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101902/development_predictions.npz": "e6e1952bcbaedf0cba52cb60cbc8620b3d397f764c3e21617d542263ccf97f1b",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101903/freddie_mac_2022_evaluation.npz": "b8150a2227c91eb9fa52c39161c553a81c836835392955d53f52ab2b3045c211",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101903/freddie_mac_2023_evaluation.npz": "94b64a993b477a861d09439889206b1e6284ffea2df0ded9a011ac9e72f2cacb",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101903/freddie_mac_2021_evaluation.npz": "bdb6e633595a027717e97c55cca860bd0f6c27e23a65f665152f19b2925799da",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101903/freddie_mac_2018_evaluation.npz": "389ff1a9c568229e00c3a5cc2886d1fb3099a2cac063f2e33b7f9959d3d8bb7d",
+    "results/tables/v1_9_candidate_rebuild/local_cache/freddie_mac_2018__s2026101903/development_predictions.npz": "65878225e48dc33a2d97aa025ee05ab29e99ffd36d04dea8b669332e80a5ba06",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101903/fannie_mae_2023_evaluation.npz": "ada1043f7e4bfbb720e3f1ebabd0773fbcaebf56490eef5154e4ccb3882dde0a",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101903/fannie_mae_2022_evaluation.npz": "bae6a5d0088db23b2d504c378f3a8eb5e38053e69baea21f3a987db8a837ca3e",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101903/fannie_mae_2021_evaluation.npz": "17f28a60be687225578f10ba795f73ef2b4368925a43f5956cc1037dbf828a41",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101903/development_predictions.npz": "1f833922ddcf96e878ec4acba4e2a6ecec57b1da3dbfa7c040f421b4ad20a8d8",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101903/fannie_mae_2018_evaluation.npz": "42f8695193060efb9cc1f7ef5e678e01fcb991fbf36f8bc2f8796cbdeb3ed457",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101902/fannie_mae_2023_evaluation.npz": "a3f9f447e8ec375f5ebac5030c2de33f87b8e986090e6b9dae1bba088750bf11",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101902/fannie_mae_2022_evaluation.npz": "886689aff51c086a81ce5abb98cc686a86e86dbeddfb6ef9e0bd881d885c7499",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101902/fannie_mae_2021_evaluation.npz": "5ffb2fac2d16ea090f387eddecac3d1e595fe279bd2b13987bde4a982d23c079",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101902/development_predictions.npz": "85b0f0ee16a7d875867a979547be2370f6df75a49ebcaee687571bc4cca876ca",
+    "results/tables/v1_9_candidate_rebuild/local_cache/fannie_mae_2018__s2026101902/fannie_mae_2018_evaluation.npz": "6716e76a5d8ca0ed09c4de27023f5a0101dec368a3321731f7acc52be0747cfb"
+  }
+}
